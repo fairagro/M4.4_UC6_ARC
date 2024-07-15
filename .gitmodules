@@ -1,0 +1,4 @@
+[submodule "uc6_csmTools"]
+	path = uc6_csmTools
+	url = https://github.com/fairagro/uc6_csmTools/
+	branch = feature/package_management
