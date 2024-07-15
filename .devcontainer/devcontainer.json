@@ -1,0 +1,9 @@
+{
+	"name": "R (rocker/r-ver base)",
+	"image": "ghcr.io/rocker-org/devcontainer/r-ver:4.4",
+	"onCreateCommand": {
+		"system.requirements": "chmod +x ./uc6_csmTools/install_requirements.sh && ./uc6_csmTools/install_requirements.sh",
+		"r.requirements": "chmod +x ./uc6_csmTools/install_rdeps.sh && ./uc6_csmTools/install_rdeps.sh",
+		"r.install": "R -e 'install.packages(\"optparse\")'"
+	}
+}
