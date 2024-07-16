@@ -1,6 +1,6 @@
 # Changelog
 
-## 2024-05-16 (JK)
+## 2024-07-16 (JK)
 * Initialized renv in root directory and installed `csmTools` with its dependecies by using `renv::install("fairagro/uc6_csmTools@feature/package_management")`. The `cropcalendars` package needed to be installed prior to csmTools by using `renv::install("AgMIP-GGCMI/cropCalendars")`.
 
 * Issues with `rdwd` could be fixed by using `rdwd::updateRdwd()` to update its indexes.
