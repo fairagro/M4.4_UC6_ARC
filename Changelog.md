@@ -7,7 +7,7 @@
 
 * Issues with `DSST` could be fixed by using Version 0.0.8.
 
-* The csmTools::get_weather function is dependent on a file in the data directory. Maybe it should load the file automatically instead of offloading that to the consumer. Is that possible?
+* The `csmTools::get_weather` function is dependent on a file in the data directory. Maybe it should load the file automatically instead of offloading that to the consumer. Is that possible?
 
 * separated the csmTools Pipeline in 15 subscripts which can be used in workflow later
 
