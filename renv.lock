@@ -22,9 +22,9 @@
     },
     "DSSAT": {
       "Package": "DSSAT",
-      "Version": "0.0.9",
+      "Version": "0.0.8",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "dplyr",
         "glue",
@@ -40,7 +40,7 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "8e938a5614dee6a96e2961b280db5ab5"
+      "Hash": "38b4a31c3832bad3fd677b7e06328248"
     },
     "KernSmooth": {
       "Package": "KernSmooth",
@@ -881,15 +881,20 @@
     },
     "rdwd": {
       "Package": "rdwd",
-      "Version": "1.8.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
+      "Version": "1.8.10",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "brry",
+      "RemoteRepo": "rdwd",
+      "RemoteRef": "master",
+      "RemoteSha": "480db714771a1e7e4b2e73026423e00fa358bcd3",
       "Requirements": [
         "R",
         "berryFunctions",
         "pbapply"
       ],
-      "Hash": "e6c233ac5d0bc3496ee198f197ede0b0"
+      "Hash": "742e68562150feb47ae006451a6ad78d"
     },
     "readODS": {
       "Package": "readODS",
