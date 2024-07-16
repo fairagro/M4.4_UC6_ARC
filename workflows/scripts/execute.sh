@@ -13,4 +13,4 @@ Rscript $(dirname "$0")/icasa2dssat.R
 Rscript $(dirname "$0")/format_dssat.R
 Rscript $(dirname "$0")/prepare_simulation.R --dir ~/dssat/
 Rscript $(dirname "$0")/simulate.R --executable ~/dssat/dscsm048
-Rscript $(dirname "$0")/plot_results.R"
+Rscript $(dirname "$0")/plot_results.R
