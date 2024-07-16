@@ -18,3 +18,7 @@
 * Reason: The module also contains the data from BonaRes, etc. which is needed for the pipeline.
 
 * Consideration: Is root (`./`) the appropriate path for that?
+
+## 2024-07-02 (PK)
+
+* Created ARC skeleton with ARCitect
