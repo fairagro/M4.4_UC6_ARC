@@ -1,10 +1,10 @@
 parser <- optparse::OptionParser()
-parser <- optparse::add_option(parser, c("-d", "--data"), type="character", help="Path to the experimental data")
+parser <- optparse::add_option(parser, c("-d", "--data"), type="character", help="Path to the experimental data directory")
 opt <- optparse::parse_args(parser)
 
-
-db_files <- list.files(path = opt$data, pattern = "\\.csv$")
-db_paths <- sapply(db_files, function(x){ paste0(opt$data, x) })
+path = paste0(opt$data, "/")
+db_files <- list.files(path = path, pattern = "\\.csv$")
+db_paths <- sapply(db_files, function(x){ paste0(path, x) })
 db_list <- lapply(db_paths, function(x) { file <- read.csv(x, fileEncoding = "iso-8859-1") })
 
 # Simplify names

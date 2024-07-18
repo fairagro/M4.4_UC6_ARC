@@ -29,12 +29,12 @@ def get_optparse(content: str) -> list[InputOption]:
         name = re.findall(parameter_pattern, option)[0]
         type = re.findall(type_pattern, option)[0]
         # could also be a file or path! make some guessing
-        help = re.findall(help_pattern, option)[0]
-        if "path" or "folder" in help:
+        help = str.lower(re.findall(help_pattern, option)[0])
+        if "path" in help or "folder" in help or "directory" in help:
             type = "directory"
         if "file" in help:
             type = "file"
-            
+
         options.append(InputOption(name, "--" + name, type))
 
     return options

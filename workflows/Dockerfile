@@ -10,5 +10,4 @@ RUN R -e 'install.packages("devtools")'
 RUN R -e 'install.packages("optparse")'
 RUN R -e 'devtools::install_github("AgMIP-GGCMI/cropCalendars")'
 RUN R -e 'devtools::install_github("fairagro/uc6_csmTools@feature/package_management")'
-
-LABEL org.opencontainers.image.title="Workflow Image"
+RUN R -e "rdwd::updateRdwd()"

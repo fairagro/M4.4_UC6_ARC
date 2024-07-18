@@ -1,15 +1,16 @@
 parser <- optparse::OptionParser()
-parser <- optparse::add_option(parser, c("-s", "--sol"), type="character", help="Path to the SOL file")
-parser <- optparse::add_option(parser, c("-i", "--id"), type="character", help="soil Id")
+parser <- optparse::add_option(parser, c("-s", "--soil"), type="character", help="Path to the SOL file")
+parser <- optparse::add_option(parser, c("-i", "--soil_id"), type="character", help="Soil Id in SOL")
 opt <- optparse::parse_args(parser)
 
 library(DSSAT)
 library(dplyr)
 library(tidyr)
+library(csmTools)
 
-SOIL_generic <- read_sol(file_name = opt$sol, id_soil = opt$id)
-
-SOIL_dssat_icasa <- read.csv("uc6_csmTools/data/soil_dssat_icasa.csv", fileEncoding = "latin1") # is in /data so no argument needed
+SOIL_generic <- read_sol(file_name = opt$soil, id_soil = opt$soil_id)
+soil_dssat_icasa <- system.file("data/soil_dssat_icasa.csv", package = "csmTools")
+SOIL_dssat_icasa <- read.csv(soil_dssat_icasa, fileEncoding = "latin1") # is in /data so no argument needed
 
 for (i in seq_along(colnames(SOIL_generic))) {
   for (j in 1:nrow(SOIL_dssat_icasa)){

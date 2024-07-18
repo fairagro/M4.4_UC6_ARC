@@ -1,7 +1,7 @@
 load("transformed.RData")
 load("reshaped.RData")
-load("uc6_csmTools/data/BnR_seehausen_icasa.Rda") # TODO: how to get from package?
 
+library(csmTools)
 BNR_full <- list(GENERAL = GENERAL,
                  FIELDS = FIELDS,
                  TREATMENTS = TREATMENTS,
@@ -25,7 +25,7 @@ attr(BNR_full, "SITE_CODE") <- attr(seehausen_fmt, "SITE_CODE")
 # Apply mappings (currently, only exaxt matches headers, codes and unit conversions)
 BNR_mapped <- BNR_full
 for (i in seq_along(names(BNR_full))) {
-  BNR_mapped[[i]] <- csmTools::map_data(df = BNR_full[[i]],
+  BNR_mapped[[i]] <- map_data(df = BNR_full[[i]],
                               tbl_name = names(BNR_full)[i],
                               map = bnr_seehausen_icasa,
                               keep_unmapped = FALSE,

@@ -1,5 +1,4 @@
 load("mapped_phenology.RData")
-load("uc6_csmTools/data/icasa_dssat.Rda") # TODO: how to get from package?
 
 # ICASA to DSSAT variable mapping -----------------------------------
 

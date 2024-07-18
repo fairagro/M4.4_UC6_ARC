@@ -1,5 +1,4 @@
 load("transformed.RData")
-load("uc6_csmTools/data/wth_data_maps.Rda") # TODO: how to get from package?
 
 library(dplyr)
 library(rdwd)
