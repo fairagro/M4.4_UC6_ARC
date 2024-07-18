@@ -11,5 +11,4 @@ RUN R -e 'install.packages("optparse")'
 RUN R -e 'devtools::install_github("AgMIP-GGCMI/cropCalendars")'
 RUN R -e 'devtools::install_github("fairagro/uc6_csmTools@feature/package_management")'
 
-LABEL org.opencontainers.image.source="https://github.com/fairagro/M4.4_UC6_ARC"
-LABEL org.opencontainers.image.description="Workflow Image"
+LABEL org.opencontainers.image.title="Workflow Image"
