@@ -1,5 +1,11 @@
 # Changelog
 
+## 2024-07-18 (JK)
+* Added Dockerfile for our CWL Workflows. GitHub CI always pushed as a private package - so the temporary CI was removed.
+* Added primitive R file parsing to generate CWL CommandLineTools
+* Added CWL CommandLineTools by using aforementioned tools
+* manually created main.cwl file
+
 ## 2024-07-16 (JK)
 * Initialized renv in root directory and installed `csmTools` with its dependecies by using `renv::install("fairagro/uc6_csmTools@feature/package_management")`. The `cropcalendars` package needed to be installed prior to csmTools by using `renv::install("AgMIP-GGCMI/cropCalendars")`.
 

@@ -9,8 +9,7 @@ library(tidyr)
 library(csmTools)
 
 SOIL_generic <- read_sol(file_name = opt$soil, id_soil = opt$soil_id)
-soil_dssat_icasa <- system.file("data/soil_dssat_icasa.csv", package = "csmTools")
-SOIL_dssat_icasa <- read.csv(soil_dssat_icasa, fileEncoding = "latin1") # is in /data so no argument needed
+SOIL_dssat_icasa <- read.csv("uc6_csmTools/data/soil_dssat_icasa.csv", fileEncoding = "latin1") # is in /data so no argument needed
 
 for (i in seq_along(colnames(SOIL_generic))) {
   for (j in 1:nrow(SOIL_dssat_icasa)){
