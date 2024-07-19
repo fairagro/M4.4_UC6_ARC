@@ -6,8 +6,9 @@ RUN wget https://raw.githubusercontent.com/fairagro/uc6_csmTools/feature/package
 
 RUN chmod +x ./install_requirements.sh && ./install_requirements.sh
 
+RUN wget https://raw.githubusercontent.com/fairagro/uc6_csmTools/feature/package_management/install_dssat.sh
+RUN chmod +x ./install_dssat.sh && ./install_dssat.sh /usr/local/dssat
+
 RUN R -e 'install.packages("devtools")'
 RUN R -e 'install.packages("optparse")'
-RUN R -e 'devtools::install_github("AgMIP-GGCMI/cropCalendars")'
 RUN R -e 'devtools::install_github("fairagro/uc6_csmTools@feature/package_management")'
-RUN R -e "rdwd::updateRdwd()"

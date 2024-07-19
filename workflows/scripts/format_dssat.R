@@ -88,7 +88,7 @@ for (i in names(BNR_yr_filex)) {
 BNR_yr_merged <- lapply(BNR_yr_merged, function(ls) ls[lengths(ls) > 0])
 
 # Export the data
-path <- paste0("runs/01_raw") # hardcoded, needs run id or so in the future
+path <- paste0("01_raw") # hardcoded, needs run id or so in the future
 if (dir.exists(path) == FALSE) {
   dir.create(path)
 }
@@ -99,8 +99,9 @@ for (i in names(BNR_yr_merged)) {
 }
 
 BNR_sol <- BNR_sol %>% rename(`SCS FAMILY` = SCS.FAMILY)  # problematic variable name with space
-write_sol(BNR_sol, title = "General DSSAT Soil Input File", file_name = paste0(path, "/SEDE.SOL"),
+write_sol(BNR_sol, title = "General DSSAT Soil Input File", file_name = "SEDE.SOL",
           append = FALSE)
 #TODO: generate file_name and title in the build_sol function
 
 save(BNR_yr_merged, file="format_dssat.RData")
+#save(lol, file="SEDE.SOL")

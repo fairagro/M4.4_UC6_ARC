@@ -1,8 +1,11 @@
 parser <- optparse::OptionParser()
-parser <- optparse::add_option(parser, c("-d", "--dir"), type="character", help="Directory containing DSSAT data")
+parser <- optparse::add_option(parser, c("-s", "--sol"), type="character", help="Path to the SEDE.SOL file")
+parser <- optparse::add_option(parser, c("-l", "--soil"), type="character", help="Path to the SOIL.SOL file")
 opt <- optparse::parse_args(parser)
 
 load("format_dssat.RData")
+file.copy(opt$sol, "SEDE.SOL")
+file.copy(opt$soil, "SOIL.SOL")
 
 library(DSSAT)
 library(lubridate)
@@ -10,17 +13,9 @@ library(csmTools)
 
 # Simulations -------------------------------------------------------------
 
-dssat_dir <- opt$dir
+dssat_dir <- "/usr/local/dssat"
 
-path <- paste0("runs/2_sim") # hardcoded, needs run id or so in the future
-if (dir.exists(path) == FALSE) {
-  dir.create(path)
-}
-
-old_wd <- paste0(getwd(), "/") # trailing slash to avoid path issues
-sim_wd <- paste0(old_wd, path)
-setwd(sim_wd)
-
+options(DSSAT.CSM = "/usr/local/dssat/dscsm048")
 
 # ==== Input data adjustments ---------------------------------------------
 
@@ -51,7 +46,7 @@ try(whaps_cul <- add_cultivar(whaps_cul,  # if the cultivar is still in the file
 ) # errored as commented, just wrap into a try() function
 lteSe_1995_filex$CULTIVARS$INGENO <- "IB9999"  # cultivat code in file X links to cultivar file
 
-write_cul(whaps_cul, paste0(dssat_dir, "/Genotype/WHAPS048.CUL"))  # export the updated file
+write_cul(whaps_cul, "WHAPS048.CUL")  # export the updated file
 
 
 # Set simulation controls
@@ -86,19 +81,28 @@ lteSe_1995_filex$SIMULATION_CONTROLS$VBOSE <- "Y"  # verbose
 
 # Write example data files (X, A, T) in the simulation directory
 # Prototype data: seehausen LTE, year 1995 (wheat - rainfed)
-write_filex(lteSe_1995_filex, paste0(sim_wd, "/SEDE9501.WHX"))  # ignore warnings
-write_filea(BNR_yr_merged$Y1995$FILEA, paste0(sim_wd, "/SEDE9501.WHA")) 
+write_filex(lteSe_1995_filex, "SEDE9501.WHX") # ignore warnings
+write_filea(BNR_yr_merged$Y1995$FILEA, "SEDE9501.WHA")
 
 # Weather, soil and cultivar files must be located within the DSSAT CSM directory (locally installed)
 # For weather files, two years may be required if management events took place in the fall/winter preceding
 # the harvest years (typically planting/tillage)
 unique(year(all_dates))  # 1994, 1995 ==> two weather files required
 
-write_wth2(BNR_yr_merged$Y1994$WTH, paste0(dssat_dir, "/Weather/SEDE9401.WTH"))
-write_wth2(BNR_yr_merged$Y1995$WTH, paste0(dssat_dir, "/Weather/SEDE9501.WTH"))
+write_wth2(BNR_yr_merged$Y1994$WTH, "SEDE9401.WTH")
+write_wth2(BNR_yr_merged$Y1995$WTH, "SEDE9501.WTH")
 
 # Soil profile not copied as generic soil was used in this example(already in DSSAT Soil directory)
 #write_sol(BNR_yr_merged$Y1995$WTH, paste0(sim_wd, "Soil/SEDE.SOL"))  # soil profile
 
-setwd(old_wd)
-save(sim_wd, old_wd, file="sim_wd.RData")
+batch_tbl <- data.frame(FILEX = "SEDE9501.WHX",
+                        TRTNO = 1:4,
+                        RP = 1,
+                        SQ = 0,
+                        OP = 0,
+                        CO = 0)
+
+# Write example batch file
+write_dssbatch(batch_tbl)
+# Run simulations
+run_dssat(run_mode = "B")

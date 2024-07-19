@@ -1,4 +1,5 @@
 load("mapped_phenology.RData")
+library(csmTools)
 
 # ICASA to DSSAT variable mapping -----------------------------------
 

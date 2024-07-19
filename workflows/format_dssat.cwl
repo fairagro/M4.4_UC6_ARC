@@ -29,6 +29,10 @@ outputs:
   type: File
   outputBinding:
     glob: format_dssat.RData
+- id: SEDE.SOL
+  type: File
+  outputBinding:
+    glob: SEDE.SOL
 
 baseCommand:
 - Rscript

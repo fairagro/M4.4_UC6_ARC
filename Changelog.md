@@ -1,9 +1,21 @@
 # Changelog
 
+## 2024-07-19 (JK)
+* continued with the `main.cwl` Workflow and added `inputs.yml`
+    * To execute Workflow call `cwltool main.cwl inputs.yml`
+    * 12/14 steps are working - `dssat` simulation missing
+* fixed some issues with BLs Repo when working in CWL
+    * correct handling of contents in `data` folder
+        * especially the csv-File was a big issue, as R saves and loads text files with `stringsAsFactors` enabled
+    * specify GitHub requirements in `DESCRIPTION` File
+        * only `devtools::install_github("fairagro/uc6_csmTools@feature/package_management")` is needed, no more updating `rdwd` or installing `cropCalendars` prior.
+* improved `Dockerfile` which is now in Workflows-Folder
+* creating Workflows is not an easy task, you have to know what you are doing!
+
 ## 2024-07-18 (JK)
 * Added Dockerfile for our CWL Workflows. GitHub CI always pushed as a private package - so the temporary CI was removed.
 * Added primitive R file parsing to generate CWL CommandLineTools
-* Added CWL CommandLineTools by using aforementioned tools
+* Added CWL CommandLineTools by using aforementioned tools `./generate.sh` 
 * manually created main.cwl file
 
 ## 2024-07-16 (JK)

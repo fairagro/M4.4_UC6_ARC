@@ -17,18 +17,18 @@ requirements:
   dockerImageId: uc6_arc
 
 inputs:
-- id: dir
-  type: Directory
+- id: sol
+  type: File
   inputBinding:
-    prefix: --dir
+    prefix: --sol
+- id: soil
+  type: File
+  inputBinding:
+    prefix: --soil
 - id: format_dssat_RData
   type: File
 
-outputs:
-- id: sim_wd.RData
-  type: File
-  outputBinding:
-    glob: sim_wd.RData
+outputs: []
 
 baseCommand:
 - Rscript

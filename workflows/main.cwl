@@ -4,6 +4,19 @@
 cwlVersion: v1.2
 class: Workflow
 
+hints:
+  - class: SoftwareRequirement
+    packages:
+      R:
+        version: [4.4.0]
+      DSSAT:
+        version: [4.8.2.12]
+
+requirements:
+  NetworkAccess:
+    networkAccess: true
+  
+
 inputs:
   data_dir:
     type: Directory
@@ -13,12 +26,13 @@ inputs:
     type: File
   soil_id:
     type: string
+  dssat_dir:
+    type: Directory
 
 outputs:
-  plot:
+  dssat_formatted:
     type: File
-    outputSource: reshape_data/reshaped.RData
-
+    outputSource: format_dssat/format_dssat.RData
 steps:
   load_metadata:
     in:
@@ -75,3 +89,34 @@ steps:
     run: get_soil_data.cwl
     out:
     - soil_data.RData
+
+  map_soil_data:
+    in: 
+      soil_data_RData: get_soil_data/soil_data.RData
+      mapped_weather_RData: map_weather/mapped_weather.RData
+    run: map_soil_data.cwl
+    out:
+    - mapped_soil.RData
+  
+  estimate_phenology:
+    in:
+      mapped_soil_RData: map_soil_data/mapped_soil.RData
+    run: estimate_phenology.cwl
+    out:
+    - mapped_phenology.RData
+
+  icasa2dssat:
+    in:
+      mapped_phenology_RData: estimate_phenology/mapped_phenology.RData
+    run: icasa2dssat.cwl
+    out:
+    - mapped_dssat.RData
+  
+  format_dssat:
+    in:
+      mapped_dssat_RData: icasa2dssat/mapped_dssat.RData
+      weather_comments_RData: map_weather/weather_comments.RData
+    run: format_dssat.cwl
+    out:
+    - format_dssat.RData
+    - SEDE.SOL
