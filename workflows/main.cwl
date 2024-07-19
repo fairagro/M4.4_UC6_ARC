@@ -26,8 +26,6 @@ inputs:
     type: File
   soil_id:
     type: string
-  dssat_dir:
-    type: Directory
 
 outputs:
   dssat_formatted:

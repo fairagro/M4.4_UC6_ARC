@@ -8,9 +8,9 @@ requirements:
   listing:
   - entryname: format_dssat.RData
     entry: $(inputs.format_dssat_RData)
-  - entryname: prepare_simulation.R
+  - entryname: simulation.R
     entry:
-      $include: ./scripts/prepare_simulation.R
+      $include: ./scripts/simulation.R
 - class: DockerRequirement
   dockerFile:
     $include: Dockerfile
@@ -32,5 +32,5 @@ outputs: []
 
 baseCommand:
 - Rscript
-- prepare_simulation.R
+- simulation.R
 
