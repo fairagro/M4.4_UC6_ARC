@@ -10,8 +10,8 @@ The ARC will serve as a test case for the further development of a Scientific Wo
 ### Usage
 ```bash
 git clone https://github.com/fairagro/M4.4_UC6_ARC.git
-cd workflows
-cwltool main.cwl inputs.yml
+cd runs
+cwltool ../workflows/main.cwl inputs.yml
 ```
 
 ### Workflow
