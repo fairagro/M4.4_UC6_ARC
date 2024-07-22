@@ -1,5 +1,12 @@
 # Changelog
 
+## 2024-07-22 (JK)
+* `main.cwl` now contains the full workflow and WORKS!!
+    * Execution: `cwltool main.cwl inputs.yml`
+    * May takes a while to build docker and execute workflow (~20 mins?)
+* Workflow overview image added to README, created with `cwltool --print-dot main.cwl | dot -Tsvg > ../.github/workflow.svg`
+* deleted old cwl test repo as being completely obsolete now
+
 ## 2024-07-19 (JK)
 * continued with the `main.cwl` Workflow and added `inputs.yml`
     * To execute Workflow call `cwltool main.cwl inputs.yml`
