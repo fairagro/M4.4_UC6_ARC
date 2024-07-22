@@ -28,9 +28,9 @@ inputs:
     type: string
 
 outputs:
-  dssat_formatted:
+  plot:
     type: File
-    outputSource: format_dssat/format_dssat.RData
+    outputSource: plot_results/Rplots.pdf
 steps:
   load_metadata:
     in:
@@ -118,3 +118,20 @@ steps:
     out:
     - format_dssat.RData
     - SEDE.SOL
+
+  simulation:
+    in:
+      format_dssat_RData: format_dssat/format_dssat.RData
+      sol: format_dssat/SEDE.SOL
+      soil: soil_file
+    run: simulation.cwl
+    out: 
+    - output
+
+  plot_results:
+    in:
+      format_dssat_RData: format_dssat/format_dssat.RData
+      simulation_dir: simulation/output
+    run: plot_results.cwl
+    out:
+      - Rplots.pdf

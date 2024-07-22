@@ -1,4 +1,5 @@
 from enum import StrEnum
+import os
 
 class VarType(StrEnum):
     string = "string"
@@ -8,6 +9,20 @@ class VarType(StrEnum):
     directory = "directory"
     character = "character"
 
+def Infer(val: str) -> VarType:
+    if os.path.isdir(val):
+        return "directory"
+    if os.path.isfile(val):
+        return "file"
+    if os.path.splitext(val)[1]:
+        return "file"
+    if val.endswith(os.sep):
+        return "directory"
+    if val.split(os.sep)[-1].startswith("."):
+        return "file"
+    if os.sep in val:
+        return "directory"
+    return "sring"
 
 class InputOption:
     def __init__(self, name: str, binding: str, type: VarType):

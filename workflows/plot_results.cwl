@@ -17,10 +17,18 @@ requirements:
   dockerImageId: uc6_arc
 
 inputs:
+- id: simulation_dir
+  type: Directory
+  inputBinding:
+    prefix: --simulation_dir
 - id: format_dssat_RData
   type: File
 
-outputs: []
+outputs:
+- id: Rplots.pdf
+  type: File
+  outputBinding:
+    glob: Rplots.pdf
 
 baseCommand:
 - Rscript

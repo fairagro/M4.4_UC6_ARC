@@ -3,7 +3,6 @@ FROM rocker/r-ver:4.4
 RUN apt-get update && apt-get install -y git sudo wget
 
 RUN wget https://raw.githubusercontent.com/fairagro/uc6_csmTools/feature/package_management/install_requirements.sh
-
 RUN chmod +x ./install_requirements.sh && ./install_requirements.sh
 
 RUN wget https://raw.githubusercontent.com/fairagro/uc6_csmTools/feature/package_management/install_dssat.sh

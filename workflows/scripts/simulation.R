@@ -14,8 +14,8 @@ library(csmTools)
 # Simulations -------------------------------------------------------------
 
 dssat_dir <- "/usr/local/dssat"
-
 options(DSSAT.CSM = "/usr/local/dssat/dscsm048")
+list.files(dssat_dir)
 
 # ==== Input data adjustments ---------------------------------------------
 
@@ -106,3 +106,5 @@ batch_tbl <- data.frame(FILEX = "SEDE9501.WHX",
 write_dssbatch(batch_tbl)
 # Run simulations
 run_dssat(run_mode = "B")
+
+#' @exportHint /

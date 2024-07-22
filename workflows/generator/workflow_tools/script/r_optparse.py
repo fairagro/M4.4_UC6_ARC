@@ -1,6 +1,5 @@
-from .types import InputOption, OutputOption, Script
+from .types import InputOption, OutputOption, Script, Infer
 import re
-import os
 
 def load_and_parse(path: str) -> Script:
     with open(path, "r") as f:
@@ -11,9 +10,11 @@ def parse(content: str, file_name: str) -> Script:
     script = Script(file_name, "Rscript")
     options = get_optparse(content)
     loads = get_load(content)
-
     script.inputs = options + loads
-    script.outputs = get_save(content)
+
+    saves = get_save(content)
+    hints = get_exportHint(content)
+    script.outputs = saves + hints
     return script
 
 def get_optparse(content: str) -> list[InputOption]:
@@ -39,8 +40,6 @@ def get_optparse(content: str) -> list[InputOption]:
 
     return options
 
-
-
 def get_load(content: str) -> list[InputOption]:
     load_pattern = r'load\("([^"]*)'
     loads = re.findall(load_pattern, content)
@@ -53,3 +52,9 @@ def get_save(content: str) -> list[OutputOption]:
     saves = re.findall(save_pattern, content)
 
     return [OutputOption(save, "file") for save in saves]
+
+def get_exportHint(content: str) -> list[OutputOption]:
+    exportPattern = r"#'\s*@exportHint\s*([\w\-_./\\]*)"
+    exportHints = re.findall(exportPattern, content)
+    
+    return [OutputOption(exportHint, Infer(exportHint)) for exportHint in exportHints]

@@ -2,10 +2,6 @@ data_dir:
   class: Directory
   location: ../uc6_csmTools/inst/extdata/lte_seehausen/0_raw
 
-dssat_dir:
-  class: Directory
-  location: ~/dssat/
-
 metadata:
   class: File
   location: ../uc6_csmTools/inst/extdata/lte_seehausen/0_raw/lte_seehausen_xls_metadata.xls

@@ -104,4 +104,5 @@ write_sol(BNR_sol, title = "General DSSAT Soil Input File", file_name = "SEDE.SO
 #TODO: generate file_name and title in the build_sol function
 
 save(BNR_yr_merged, file="format_dssat.RData")
-#save(lol, file="SEDE.SOL")
+
+#' @exportHint SEDE.SOL

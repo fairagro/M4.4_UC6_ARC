@@ -28,7 +28,11 @@ inputs:
 - id: format_dssat_RData
   type: File
 
-outputs: []
+outputs:
+- id: output
+  type: Directory
+  outputBinding:
+    glob: $(runtime.outdir)
 
 baseCommand:
 - Rscript

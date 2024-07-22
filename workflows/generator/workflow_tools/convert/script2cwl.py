@@ -27,6 +27,12 @@ def convert(script: Script):
         outputs=[CommandOutputParameter(id=option.name, type_=type_dict[option.type], outputBinding=CommandOutputBinding(
             glob=option.name)) for option in script.outputs]
     )
+
+    for i in range(len(cwl.outputs)):
+        if cwl.outputs[i].id == "/":
+            cwl.outputs[i].id = "output"
+            cwl.outputs[i].outputBinding.glob = "$(runtime.outdir)"
+
     workDirInputs = [{"entryname": file(input.name), "entry": f"$(inputs.{input.name})"} for input in script.inputs if input.binding ==
                      "" and input.type == VarType.file]
     workDirInputs.append({"entryname": script.file_name,

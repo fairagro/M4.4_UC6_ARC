@@ -1,3 +1,7 @@
+parser <- optparse::OptionParser()
+parser <- optparse::add_option(parser, c("-s", "--simulation_dir"), type="character", help="Directory with Sim Output")
+opt <- optparse::parse_args(parser)
+
 load("format_dssat.RData")
 library(DSSAT)
 library(ggplot2)
@@ -10,7 +14,7 @@ library(dplyr)
 # Should link to the input data to retrieve treatment names and levels
 # Plot results: phenology
 
-lteSe_sim_growth <- read_output(file_name = "runs/2_sim/PlantGro.OUT")
+lteSe_sim_growth <- read_output(file_name = paste0(opt$simulation_dir,"/PlantGro.OUT"))
 
 # Format observed data for plotting
 lteSe_obs_growth <- BNR_yr_merged$Y1995$FILEA %>%
@@ -78,3 +82,5 @@ lteSe_sim_growth %>%
         axis.text = element_text(size = 9, colour = "black"))
 
 # Results are off, but it works!
+
+#' @exportHint Rplots.pdf
