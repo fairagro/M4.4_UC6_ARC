@@ -1,0 +1,49 @@
+*WHEAT CULTIVAR COEFFICIENTS: WHAPS048 MODEL
+
+!
+! ********** NWheat transition Cultivar Coefficient File ***************
+!
+! (Comments Here)
+!
+! COEFF       DEFINITIONS
+! ========    ===========
+! VAR#        Identification code or number for a specific cultivar
+! VAR-NAME    Name of cultivar
+! EXPNO       Number of experiments used to estimate cultivar parameters
+! ECO#        Ecotype code of this cultivar, points to the Ecotype in the ECO file.
+!
+! VSEN	      sensitivity to vernalisation
+! PPSEN       sensitivity to photoperiod
+! P1	        Thermal time from seedling emergence to the end of the juvenile phase
+! P5	        Thermal time (base 0oC) from beginning of grainfill to maturity: range 500 to 700
+! PHINT       Phyllochron interval
+! GRNO        Coefficient of kernel number per stem weight at the beginning of grain filling [kernels (g stem)-1]
+! MXFIL       Potential kernel growth rate [mg kernel-1 day-1]:  Values between 1.0 and 3.0
+! STMMX       Potential final dry weight of a single tiller (excluding grain) (g stem-1) values 1.0 - 3.0
+! SLAP1       ratio of leaf area to mass at emergence (cm2/g)
+!
+!             P/G/N:Phenology/Growth/Not used for calbration
+! 																   *	 *     *				   *     *
+! Coeffient #                             1     2     3     4     5     6     7     8     9
+! Calibration                             P     P     P     P     P     G     G     G     G
+! Three cultivars existing in CERES-Wheat added to NWheat by Yujing 05/05/2017
+
+@VAR#  VRNAME.......... EXPNO   ECO#  VSEN PPSEN    P1    P5 PHINT  GRNO MXFIL STMMX SLAP1
+999991 MINIMA               . 999991  0.00  1.20   380   200    85 20.00  1.60  1.00   200
+999992 MAXIMA               . 999992  4.00  4.50   530   700   130 32.00  2.90  3.00   400
+AW0071 YECORA ROJO          . IB0002  1.00  1.20   400   600   120 24.00  1.90  3.00   300
+IB0001 YECORA               . IB0001  1.00  1.20   400   600   120 24.00  1.90  3.00   400
+IB0002 ARMINDA              . IB0006  4.00  4.50   400   640   100 32.00  2.50  3.00   280
+IB0003 Lely                 . IB0005  4.00  4.50   400   640   100 32.00  2.50  1.00   280
+IB0004 RONGOTEA             . IB0002  1.00  2.00   400   600   130 20.00  1.60  3.00   300
+AW0005 Bacanora 88          . IB0003  1.90  1.50   400   700   120 25.50  2.40  3.00   300
+AW0006 Nesser               . IB0003  1.40  1.50   400   660   120 24.00  2.40  3.00   300
+SP0007 Spear                . IB0004  1.50  3.50   400   740   110 24.00  2.10  3.00   300
+WI0008 Wilgoyne             . IB0004  1.40  1.60   400   680   100 22.00  1.90  3.00   300
+IB0010 Gamenya              . IB0002  1.60  2.00   400   700   110 22.00  1.90  1.50   280
+IB0012 Recital              . IB0008  4.00  3.50   380   580    85 32.00  1.90  3.00   280
+IB0013 Yitpi                . IB0007  1.50  2.90   400   680   105 22.00  1.90  3.00   300
+IB1500 MANITOU           1,14 DFAULT  0.66  4.23   330   277    86 30.67  1.47  1.28   280
+IB0488 NEWTON             1,6 DFAULT  3.69  3.17   520   457    95 33.33  1.91  1.03   280
+IB1015 MARIS FUNDIN       1,8 DFAULT  2.46  3.51   530   472   100 20.00  2.81  1.64   300
+IB9999 Borenos              . IB0001  2.00  2.85   455   450   108 26.00  2.25  2.00   300

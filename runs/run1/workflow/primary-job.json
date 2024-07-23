@@ -1,0 +1,25 @@
+{
+    "data_dir": {
+        "class": "Directory",
+        "basename": "0_raw"
+    },
+    "metadata": {
+        "class": "File",
+        "location": "../data/fe/fe16e043d47112f276de632fdd1bd461bb666006",
+        "size": 9728,
+        "basename": "lte_seehausen_xls_metadata.xls",
+        "nameroot": "lte_seehausen_xls_metadata",
+        "nameext": ".xls",
+        "checksum": "sha1$fe16e043d47112f276de632fdd1bd461bb666006"
+    },
+    "soil_file": {
+        "class": "File",
+        "location": "../data/91/910375771bce9382f9467f50bc7b13d7cf25af00",
+        "size": 157658,
+        "basename": "SOIL.SOL",
+        "nameroot": "SOIL",
+        "nameext": ".SOL",
+        "checksum": "sha1$910375771bce9382f9467f50bc7b13d7cf25af00"
+    },
+    "soil_id": "IB00000001"
+}

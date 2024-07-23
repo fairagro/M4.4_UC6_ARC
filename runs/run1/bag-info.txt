@@ -1,0 +1,7 @@
+Bag-Software-Agent: cwltool 3.1.20240708091337
+BagIt-Profile-Identifier: https://w3id.org/ro/bagit/profile
+Bagging-Date: 2024-07-23
+External-Description: Research Object of CWL workflow run
+Contact-Name: Jens Krumsieck
+External-Identifier: arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/
+Payload-Oxum: 4061335.69

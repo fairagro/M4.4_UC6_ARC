@@ -1,0 +1,2642 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix id: <urn:uuid:> .
+@prefix metadata: <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/metadata/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ro: <http://purl.org/wf4ever/ro#> .
+@prefix schema1: <http://schema.org/> .
+@prefix wf: <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#> .
+@prefix wf4ever: <http://purl.org/wf4ever/wf4ever#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ad0d3a2-04d1-43e9-921f-8a911866918d#ore> prov:asInBundle metadata:directory-1ad0d3a2-04d1-43e9-921f-8a911866918d.ttl ;
+    prov:mentionOf id:1ad0d3a2-04d1-43e9-921f-8a911866918d .
+
+<urn:uuid:2bce17d1-cb7f-44f0-9589-5b1428b4b222#ore> prov:asInBundle metadata:directory-2bce17d1-cb7f-44f0-9589-5b1428b4b222.ttl ;
+    prov:mentionOf id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 .
+
+<urn:uuid:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4#ore> prov:asInBundle metadata:directory-864f0f5a-b549-4e0c-9f39-47c2dc5d18f4.ttl ;
+    prov:mentionOf id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 .
+
+id:b91c7daa-8723-4372-a4b8-cdf63ffe3599 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:5e71aecf-065c-4cd0-962b-4e0e53e5a4b8 ;
+            prov:atTime "2024-07-23T10:50:37.731672"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/plot_results/Rplots.pdf> ],
+        [ a prov:Generation ;
+            prov:activity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ;
+            prov:atTime "2024-07-23T10:50:37.737801"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/primary/plot> ] ;
+    prov:specializationOf data:c6bee2c410051373f9f40654d83ab907600cd84c ;
+    cwlprov:basename "Rplots.pdf"^^xsd:string ;
+    cwlprov:nameext ".pdf"^^xsd:string ;
+    cwlprov:nameroot "Rplots"^^xsd:string .
+
+wf:main a wfdesc:Workflow,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string ;
+    wfdesc:hasSubProcess <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/estimate_phenology>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_soil_data>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_weather>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/icasa2dssat>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/load_metadata>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_icasa>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_soil_data>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/plot_results>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/preprocess_data>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/reshape_data>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation>,
+        <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/transform_data> .
+
+orcid:0000-0001-6242-5846 a schema1:Person,
+        prov:Agent,
+        prov:Person ;
+    rdfs:label "Jens Krumsieck"^^xsd:string ;
+    schema1:name "Jens Krumsieck"^^xsd:string ;
+    foaf:name "Jens Krumsieck"^^xsd:string .
+
+data:10167b39f1910f8c21151947294857f160e98f5d a wfprov:Artifact,
+        prov:Entity .
+
+data:13bbeb19d622f96a6620745d5fa3c2514aef2aa7 a wfprov:Artifact,
+        prov:Entity .
+
+data:1b827483e9a489c344ddcd619476fd100e347bc2 a wfprov:Artifact,
+        prov:Entity .
+
+data:1c40997325f60cff4959204a2bcafe36e9fc4449 a wfprov:Artifact,
+        prov:Entity .
+
+data:27a398e965a7f7f1737c45b29dcd211aa715407f a wfprov:Artifact,
+        prov:Entity .
+
+data:2a459decc4026d5e1141496cb9d3e1d63e4dc1ac a wfprov:Artifact,
+        prov:Entity .
+
+data:3fe7259638491c80b7213970e40dc0afaf7cc6d4 a wfprov:Artifact,
+        prov:Entity .
+
+data:406aae59358a34fb466387747e3d72860346dc53 a wfprov:Artifact,
+        prov:Entity .
+
+data:43985cd29b2f43bcb102e6623dee548d47072748 a wfprov:Artifact,
+        prov:Entity .
+
+data:44f444585286be0f7497ed5d7d237beb9f746fa5 a wfprov:Artifact,
+        prov:Entity .
+
+data:4a916a2d21c5aaab5d54d0b3bc4ea87fabb1681d a wfprov:Artifact,
+        prov:Entity .
+
+data:4b00f1bf4949f1ec762ed46148551af24c2fe712 a wfprov:Artifact,
+        prov:Entity .
+
+data:6102f963e09e01904301accd770b86f0eeeb98dd a wfprov:Artifact,
+        prov:Entity .
+
+data:642abcc3d774d41f9ba6caf151a2b4b81b3006fd a wfprov:Artifact,
+        prov:Entity .
+
+data:651a45c0ba1932765a7f031a2bbb81f246a5b5dc a wfprov:Artifact,
+        prov:Entity .
+
+data:68c7ed1e9bd45d58d786daf4179ab6f84d8456cd a wfprov:Artifact,
+        prov:Entity .
+
+data:74d988e0d5ffb8b0176a773801a9373cf6cd9e01 a wfprov:Artifact,
+        prov:Entity .
+
+data:75b0f973b5c3da2e39de539c5057b1f552fc3f8c a wfprov:Artifact,
+        prov:Entity .
+
+data:76fc1ada445f861583a11426ca351faf59ebbb3b a wfprov:Artifact,
+        prov:Entity .
+
+data:a3c5543caa1f89461990bd7cbb45f80a20cc4759 a wfprov:Artifact,
+        prov:Entity .
+
+data:a6340fa37497a56c36cfad92f7fc5bffbb9c5e20 a wfprov:Artifact,
+        prov:Entity .
+
+data:b30efc5cfd9b622b4946a17d09fc29582b87076e a wfprov:Artifact,
+        prov:Entity .
+
+data:c3eba95273fb7cd540d0d076b086acb43344ae94 a wfprov:Artifact,
+        prov:Entity .
+
+data:c6bee2c410051373f9f40654d83ab907600cd84c a wfprov:Artifact,
+        prov:Entity .
+
+data:cd09d3c7895ad78d66b18373347b8dd91e5dc51a a wfprov:Artifact,
+        prov:Entity .
+
+data:d28bea232ab531787b0000f738b3ea688a470a88 a wfprov:Artifact,
+        prov:Entity .
+
+data:d2c76a509e92d946332b08e2f03a847fa5ebd419 a wfprov:Artifact,
+        prov:Entity .
+
+data:d3bd568ee4ffd986bb792104a179e8f3e44862e5 a wfprov:Artifact,
+        prov:Entity .
+
+data:db41f87c117a45dcf4934821bf7284ba4f07e21b a wfprov:Artifact,
+        prov:Entity .
+
+data:dcbaa98c3b4a7fd6157322508deecb484c1d9866 a wfprov:Artifact,
+        prov:Entity .
+
+data:e53316a801a5c283ced0d802e0fa8b887c4bb037 a wfprov:Artifact,
+        prov:Entity .
+
+data:fd7ad338746d5b0d34a358f94bd0eae831bfcba3 a wfprov:Artifact,
+        prov:Entity .
+
+id:09d76839-a4dc-4ae2-804c-0ad44efdfbaa a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:0a63708f-6aa9-4b95-9e64-8dfbee2e3b6c a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:10c86151-9fe3-4b20-b877-cfffd5a242b1 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:11ad6884-bbcb-496f-a389-d06955b83a18 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:187b504f-4eda-4fb6-aefd-1f6a30e323e3 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:b241450f-227e-4cda-b9a0-85f67962e2c6 ;
+            prov:atTime "2024-07-23T10:49:27.568225"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_weather/weather_stations.RData> ] ;
+    prov:specializationOf data:68c7ed1e9bd45d58d786daf4179ab6f84d8456cd ;
+    cwlprov:basename "weather_stations.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "weather_stations"^^xsd:string .
+
+id:1955a3e7-43bb-4c2b-a4d8-35c645708c8d a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:6efdadc4-c398-44c1-908e-ce44ec05c8c3 ;
+            prov:atTime "2024-07-23T10:38:11.722333"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/load_metadata/metadata.RData> ] ;
+    prov:specializationOf data:74d988e0d5ffb8b0176a773801a9373cf6cd9e01 ;
+    cwlprov:basename "metadata.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "metadata"^^xsd:string .
+
+id:1961d807-682b-4f4f-9edc-24aecbab10a8 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:1a2f580b-d94b-4d55-b708-416ea3a2a899 a prov:Agent ;
+    prov:actedOnBehalfOf orcid:0000-0001-6242-5846 .
+
+id:2e2290c5-b4ce-426b-9bb2-ada8d74c33c4 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:2e28f3c1-5dff-4195-8e75-11bc11fa567c a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:f9e3d303-7f88-46a7-8137-575fbd6a5ab8 ;
+            prov:atTime "2024-07-23T10:49:53.693025"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/estimate_phenology/mapped_phenology.RData> ] ;
+    prov:specializationOf data:3fe7259638491c80b7213970e40dc0afaf7cc6d4 ;
+    cwlprov:basename "mapped_phenology.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "mapped_phenology"^^xsd:string .
+
+id:3163ad36-c6ca-4c90-aeaa-a8b46c8a2415 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:9f8b88d8-5597-49ed-8356-a11c0b3bf201 ;
+            prov:atTime "2024-07-23T10:49:34.550170"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather/mapped_weather.RData> ] ;
+    prov:specializationOf data:fd7ad338746d5b0d34a358f94bd0eae831bfcba3 ;
+    cwlprov:basename "mapped_weather.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "mapped_weather"^^xsd:string .
+
+id:4ee43560-db06-42d1-a69f-14fa7e6bb801 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/map_soil_data"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_soil_data> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:49:35.558554"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:49:34.553686"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:49:34.555772"^^xsd:dateTime ;
+            prov:entity id:d6e3d975-8bcb-46db-9d36-187277b8f094 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_soil_data/soil_data_RData> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:49:34.555497"^^xsd:dateTime ;
+            prov:entity id:3163ad36-c6ca-4c90-aeaa-a8b46c8a2415 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_soil_data/mapped_weather_RData> ] ;
+    prov:wasAssociatedWith id:802f769e-0872-4489-8d0a-da246111600d,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:5dbf73d6-4b53-4848-a67f-316440cd0760 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:4ee43560-db06-42d1-a69f-14fa7e6bb801 ;
+            prov:atTime "2024-07-23T10:49:35.558561"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_soil_data/mapped_soil.RData> ] ;
+    prov:specializationOf data:2a459decc4026d5e1141496cb9d3e1d63e4dc1ac ;
+    cwlprov:basename "mapped_soil.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "mapped_soil"^^xsd:string .
+
+id:5e71aecf-065c-4cd0-962b-4e0e53e5a4b8 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/plot_results"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/plot_results> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:50:37.731666"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:50:34.687889"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:34.689868"^^xsd:dateTime ;
+            prov:entity id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/plot_results/simulation_dir> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:34.689822"^^xsd:dateTime ;
+            prov:entity id:0fc8fd65-200b-4b9d-bbc7-481d0149ae7b ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/plot_results/format_dssat_RData> ] ;
+    prov:wasAssociatedWith id:8550484a-fc34-429b-951d-5816196eda4f,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:5f4de5e9-297e-4367-9141-bd1721e67cb0 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:7d1a54f9-9c30-481b-b308-1275d29caadb ;
+            prov:atTime "2024-07-23T10:38:12.759035"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/preprocess_data/preprocessed.RData> ] ;
+    prov:specializationOf data:a6340fa37497a56c36cfad92f7fc5bffbb9c5e20 ;
+    cwlprov:basename "preprocessed.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "preprocessed"^^xsd:string .
+
+id:5f59ae70-3633-48d4-882d-28577a41faa6 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:9f8b88d8-5597-49ed-8356-a11c0b3bf201 ;
+            prov:atTime "2024-07-23T10:49:34.550170"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather/weather_comments.RData> ] ;
+    prov:specializationOf data:6102f963e09e01904301accd770b86f0eeeb98dd ;
+    cwlprov:basename "weather_comments.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "weather_comments"^^xsd:string .
+
+id:6143b62c-3060-474c-b9a6-b68395b2f92c a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:910375771bce9382f9467f50bc7b13d7cf25af00 ;
+    cwlprov:basename "SOIL.SOL"^^xsd:string ;
+    cwlprov:nameext ".SOL"^^xsd:string ;
+    cwlprov:nameroot "SOIL"^^xsd:string .
+
+id:66e0dbea-2f62-4e9e-a779-547af007cbd1 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/get_soil_data"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_soil_data> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:38:10.714585"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:29:49.647148"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:03.883334"^^xsd:dateTime ;
+            prov:entity data:60029e84564b4f687c58171715e57fd514a3144b ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_soil_data/soil_id> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:03.883000"^^xsd:dateTime ;
+            prov:entity id:d11de521-fc9f-46c1-80e1-9ef9e12cef90 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_soil_data/soil> ] ;
+    prov:wasAssociatedWith id:11ad6884-bbcb-496f-a389-d06955b83a18,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:6b32bfd0-ad40-4152-8cb2-9e3c9f2cf898 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/reshape_data"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/reshape_data> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:38:32.011862"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:38:12.762364"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:12.764260"^^xsd:dateTime ;
+            prov:entity id:5f4de5e9-297e-4367-9141-bd1721e67cb0 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/reshape_data/preprocessed_RData> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:12.764208"^^xsd:dateTime ;
+            prov:entity id:1955a3e7-43bb-4c2b-a4d8-35c645708c8d ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/reshape_data/metadata_RData> ] ;
+    prov:wasAssociatedWith id:7d486815-edf9-4596-a6a3-c43ce9cf5b0c,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:6efdadc4-c398-44c1-908e-ce44ec05c8c3 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/load_metadata"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/load_metadata> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:38:11.722327"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:38:10.717585"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:10.719781"^^xsd:dateTime ;
+            prov:entity id:a430c3cb-fc54-4679-ad71-5b03881445f2 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/load_metadata/data> ] ;
+    prov:wasAssociatedWith id:09d76839-a4dc-4ae2-804c-0ad44efdfbaa,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:7d1a54f9-9c30-481b-b308-1275d29caadb a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/preprocess_data"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/preprocess_data> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:38:12.759028"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:38:11.725174"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:11.757250"^^xsd:dateTime ;
+            prov:entity id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/preprocess_data/data> ] ;
+    prov:wasAssociatedWith id:c0f9cc21-00f9-4057-aacd-cf2ededdb2af,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:7d486815-edf9-4596-a6a3-c43ce9cf5b0c a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:802f769e-0872-4489-8d0a-da246111600d a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:8550484a-fc34-429b-951d-5816196eda4f a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:85b20c00-3f36-4ab4-957e-07fdf3b8d2dd a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:910375771bce9382f9467f50bc7b13d7cf25af00 ;
+    cwlprov:basename "SOIL.SOL"^^xsd:string ;
+    cwlprov:nameext ".SOL"^^xsd:string ;
+    cwlprov:nameroot "SOIL"^^xsd:string .
+
+id:8e4faadb-6290-4062-98f4-7775ed9d6832 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:a430c3cb-fc54-4679-ad71-5b03881445f2 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:fe16e043d47112f276de632fdd1bd461bb666006 ;
+    cwlprov:basename "lte_seehausen_xls_metadata.xls"^^xsd:string ;
+    cwlprov:nameext ".xls"^^xsd:string ;
+    cwlprov:nameroot "lte_seehausen_xls_metadata"^^xsd:string .
+
+id:aa7cb22d-e53e-4984-9b93-25550f2e1c1d a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:ac5153c0-6cdb-4366-9b14-004eefb0f0c1 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:b241450f-227e-4cda-b9a0-85f67962e2c6 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/get_weather"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_weather> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:49:27.568219"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:38:44.221394"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:44.223144"^^xsd:dateTime ;
+            prov:entity id:21e64fd8-579c-4662-9427-797e19366c42 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_weather/transformed_RData> ] ;
+    prov:wasAssociatedWith id:10c86151-9fe3-4b20-b877-cfffd5a242b1,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:b6816357-85a5-4739-bf4b-e52611638691 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/simulation"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:50:34.655762"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:50:27.196489"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:27.198292"^^xsd:dateTime ;
+            prov:entity id:0fc8fd65-200b-4b9d-bbc7-481d0149ae7b ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation/format_dssat_RData> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:27.198796"^^xsd:dateTime ;
+            prov:entity id:6143b62c-3060-474c-b9a6-b68395b2f92c ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation/soil> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:27.198843"^^xsd:dateTime ;
+            prov:entity id:c359b4a0-64a7-4397-adbc-7bab496754e3 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation/sol> ] ;
+    prov:wasAssociatedWith id:aa7cb22d-e53e-4984-9b93-25550f2e1c1d,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:b6cd1f13-79d1-4eef-94d6-3fa0df4ec388 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:c410c55d-2a92-432f-9168-74d1808dea23 ;
+            prov:atTime "2024-07-23T10:38:44.218989"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_icasa/mapped_icasa.RData> ] ;
+    prov:specializationOf data:db41f87c117a45dcf4934821bf7284ba4f07e21b ;
+    cwlprov:basename "mapped_icasa.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "mapped_icasa"^^xsd:string .
+
+id:b824cc9b-232c-43de-938b-247b69d504e5 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:c0f9cc21-00f9-4057-aacd-cf2ededdb2af a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image uc6_arc"^^xsd:string ;
+    cwlprov:image "uc6_arc"^^xsd:string .
+
+id:c1040a1d-99a3-491a-bb38-8e706a144618 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:fe16e043d47112f276de632fdd1bd461bb666006 ;
+    cwlprov:basename "lte_seehausen_xls_metadata.xls"^^xsd:string ;
+    cwlprov:nameext ".xls"^^xsd:string ;
+    cwlprov:nameroot "lte_seehausen_xls_metadata"^^xsd:string .
+
+id:c359b4a0-64a7-4397-adbc-7bab496754e3 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:9c9d2647-6d15-4de1-ac03-d0b4a998477b ;
+            prov:atTime "2024-07-23T10:50:27.191977"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat/SEDE.SOL> ] ;
+    prov:specializationOf data:671b545cfca70c427b94daabe900c2cc1ef7d7d4 ;
+    cwlprov:basename "SEDE.SOL"^^xsd:string ;
+    cwlprov:nameext ".SOL"^^xsd:string ;
+    cwlprov:nameroot "SEDE"^^xsd:string .
+
+id:c410c55d-2a92-432f-9168-74d1808dea23 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/map_icasa"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_icasa> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:38:44.218984"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:38:37.658722"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:37.660642"^^xsd:dateTime ;
+            prov:entity id:21e64fd8-579c-4662-9427-797e19366c42 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_icasa/transformed_RData> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:37.660589"^^xsd:dateTime ;
+            prov:entity id:b145cc07-fc15-4775-bf4a-e3855d64339c ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_icasa/reshaped_RData> ] ;
+    prov:wasAssociatedWith id:1961d807-682b-4f4f-9edc-24aecbab10a8,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:c77b2b0b-64e1-4765-b28b-07d034f278fe a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/transform_data"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/transform_data> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:38:37.655737"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:38:32.014443"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:38:32.016293"^^xsd:dateTime ;
+            prov:entity id:b145cc07-fc15-4775-bf4a-e3855d64339c ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/transform_data/reshaped_RData> ] ;
+    prov:wasAssociatedWith id:b824cc9b-232c-43de-938b-247b69d504e5,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:cde405df-4cde-41e8-9cb4-d68b8b69954d a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/icasa2dssat"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/icasa2dssat> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:50:00.321964"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:49:53.695766"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:49:53.697549"^^xsd:dateTime ;
+            prov:entity id:2e28f3c1-5dff-4195-8e75-11bc11fa567c ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/icasa2dssat/mapped_phenology_RData> ] ;
+    prov:wasAssociatedWith id:8e4faadb-6290-4062-98f4-7775ed9d6832,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:d11de521-fc9f-46c1-80e1-9ef9e12cef90 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:910375771bce9382f9467f50bc7b13d7cf25af00 ;
+    cwlprov:basename "SOIL.SOL"^^xsd:string ;
+    cwlprov:nameext ".SOL"^^xsd:string ;
+    cwlprov:nameroot "SOIL"^^xsd:string .
+
+id:d6e3d975-8bcb-46db-9d36-187277b8f094 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:66e0dbea-2f62-4e9e-a779-547af007cbd1 ;
+            prov:atTime "2024-07-23T10:38:10.714591"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_soil_data/soil_data.RData> ] ;
+    prov:specializationOf data:1b827483e9a489c344ddcd619476fd100e347bc2 ;
+    cwlprov:basename "soil_data.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "soil_data"^^xsd:string .
+
+id:f5235d36-7aa1-4005-8871-3ff9c8ab2710 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:cde405df-4cde-41e8-9cb4-d68b8b69954d ;
+            prov:atTime "2024-07-23T10:50:00.321970"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/icasa2dssat/mapped_dssat.RData> ] ;
+    prov:specializationOf data:d28bea232ab531787b0000f738b3ea688a470a88 ;
+    cwlprov:basename "mapped_dssat.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "mapped_dssat"^^xsd:string .
+
+id:f9e3d303-7f88-46a7-8137-575fbd6a5ab8 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/estimate_phenology"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/estimate_phenology> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:49:53.693018"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:49:35.561306"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:49:35.563171"^^xsd:dateTime ;
+            prov:entity id:5dbf73d6-4b53-4848-a67f-316440cd0760 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/estimate_phenology/mapped_soil_RData> ] ;
+    prov:wasAssociatedWith id:2e2290c5-b4ce-426b-9bb2-ada8d74c33c4,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/estimate_phenology> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_soil_data> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/get_weather> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/icasa2dssat> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/load_metadata> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_icasa> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_soil_data> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/plot_results> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/preprocess_data> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/reshape_data> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+<arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/transform_data> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+data:0a7152192964c8080e07fe8977be181c5a191d1d a wfprov:Artifact,
+        prov:Entity .
+
+data:0f0b5a684fb5971be7f48601bde7b0b301d5b4b3 a wfprov:Artifact,
+        prov:Entity .
+
+data:18ecc39c238ef26a0ddb6e8eb4750644b07a0d24 a wfprov:Artifact,
+        prov:Entity .
+
+data:23cf621d3f8a5d81241afb6e9d91592491800c01 a wfprov:Artifact,
+        prov:Entity .
+
+data:27fc93539f850145055d9b52bca69bf0e0da379a a wfprov:Artifact,
+        prov:Entity .
+
+data:2e06ee20ca188a239477c0082989fc2e6b649c13 a wfprov:Artifact,
+        prov:Entity .
+
+data:2ea39399220c41b02c62e8fa67d1d3066f99e8b3 a wfprov:Artifact,
+        prov:Entity .
+
+data:2fb74015d4d04975f2cf7deeec3e5d7368bc7d46 a wfprov:Artifact,
+        prov:Entity .
+
+data:309bf760428dd1225d166bc1a6c8010b8c3a19e9 a wfprov:Artifact,
+        prov:Entity .
+
+data:375054a2d82b73e9b7dc7f33cf6cb58a0bb97141 a wfprov:Artifact,
+        prov:Entity .
+
+data:3b2df9250e1d6688cc6700cd305e3532b99468e7 a wfprov:Artifact,
+        prov:Entity .
+
+data:43b62a6ff9d19029cf4e7a42db6eff36f96ae9b8 a wfprov:Artifact,
+        prov:Entity .
+
+data:48a567af461f45e02bd9d6b61539cbe164ace9af a wfprov:Artifact,
+        prov:Entity .
+
+data:4aa0fdd11f391400ea15358132982b6df0b04084 a wfprov:Artifact,
+        prov:Entity .
+
+data:4f85f985e80e8593057082be8e82e0b97fe6c0ce a wfprov:Artifact,
+        prov:Entity .
+
+data:52cb38c167b794037d6958a887783b707fcd2d20 a wfprov:Artifact,
+        prov:Entity .
+
+data:5571077db93775f0a993e358a4cfcef6cd60d47f a wfprov:Artifact,
+        prov:Entity .
+
+data:598737e7fda7d749f70a7306bb33de102c6b31de a wfprov:Artifact,
+        prov:Entity .
+
+data:5ca5732a8ac57b82ece9d92a4dd69fdaf54284d8 a wfprov:Artifact,
+        prov:Entity .
+
+data:60029e84564b4f687c58171715e57fd514a3144b a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "IB00000001"^^xsd:string .
+
+data:671b545cfca70c427b94daabe900c2cc1ef7d7d4 a wfprov:Artifact,
+        prov:Entity .
+
+data:6aa43bb4128325f98482bc90d4c5b8c129c7ac06 a wfprov:Artifact,
+        prov:Entity .
+
+data:7a206a0b06400a4174e4a533ade9281b30908d74 a wfprov:Artifact,
+        prov:Entity .
+
+data:88f908ed48752180e0e9a694ea907f7b5ed2f9b5 a wfprov:Artifact,
+        prov:Entity .
+
+data:8c28f817f750d2f072164f248455974df704a4e4 a wfprov:Artifact,
+        prov:Entity .
+
+data:9a3c89e3f7fdadb87aba9fba38c052c368d23947 a wfprov:Artifact,
+        prov:Entity .
+
+data:9e90737e8747a204d4d042d62436fb2715474a42 a wfprov:Artifact,
+        prov:Entity .
+
+data:aa4b1ca4877c5c5300b709f9025b5f8dc078a222 a wfprov:Artifact,
+        prov:Entity .
+
+data:ae58a54de752d13bd4680914e8dc626265933a4b a wfprov:Artifact,
+        prov:Entity .
+
+data:b645d0414a1b5546fe3d496e6ae5f69b64e1d377 a wfprov:Artifact,
+        prov:Entity .
+
+data:c1f20b26f3c760125de006ff64c2d0e1630702a8 a wfprov:Artifact,
+        prov:Entity .
+
+data:d4dd10f6f635a5d3adffa06fa06be149e54563ad a wfprov:Artifact,
+        prov:Entity .
+
+data:dbc23100ba11880be3f336986cf9b9dfc53e63a2 a wfprov:Artifact,
+        prov:Entity .
+
+data:de2f41561a414a222aadd85eaeefbe8677dd23b1 a wfprov:Artifact,
+        prov:Entity .
+
+data:f48cb78256cdb7516437381d0251ed59eb8c1b45 a wfprov:Artifact,
+        prov:Entity .
+
+id:008de61f-9040-438f-8e22-59b610310042 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string ;
+    ore:proxyFor id:5c070426-5bca-45ca-8fcb-42f9e40fcecc ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:5c070426-5bca-45ca-8fcb-42f9e40fcecc ;
+    prov:pairKey "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string .
+
+id:0197f9f3-d1d3-4f42-8074-e8e1b34787ab a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string ;
+    ore:proxyFor id:b43f900e-dc5b-40ec-98b4-a2dfe70f12f3 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:b43f900e-dc5b-40ec-98b4-a2dfe70f12f3 ;
+    prov:pairKey "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string .
+
+id:062bee39-41d9-4509-af8c-b9951b19cd4f a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string ;
+    ore:proxyFor id:4c2bab59-c782-478f-b103-e2382acbd652 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:4c2bab59-c782-478f-b103-e2382acbd652 ;
+    prov:pairKey "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string .
+
+id:06f72df5-04f6-4c1c-95ee-6d70a120bbb5 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string ;
+    ore:proxyFor id:fe748200-81ee-4fad-9ab3-b4a599c24361 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:fe748200-81ee-4fad-9ab3-b4a599c24361 ;
+    prov:pairKey "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string .
+
+id:0a1bfd04-317b-43c1-ad7c-76bf1addb5ea a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string ;
+    ore:proxyFor id:3e6c94c2-0224-4817-bb81-508cacbfea8b ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:3e6c94c2-0224-4817-bb81-508cacbfea8b ;
+    prov:pairKey "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string .
+
+id:0f0a6912-d02c-4ddd-991c-6f80b8d10cd6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string ;
+    ore:proxyFor id:e2e63eba-2c9e-4a1a-a9c3-118820699d3a ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:e2e63eba-2c9e-4a1a-a9c3-118820699d3a ;
+    prov:pairKey "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string .
+
+id:0fc8fd65-200b-4b9d-bbc7-481d0149ae7b a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:9c9d2647-6d15-4de1-ac03-d0b4a998477b ;
+            prov:atTime "2024-07-23T10:50:27.191977"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat/format_dssat.RData> ] ;
+    prov:specializationOf data:dbc23100ba11880be3f336986cf9b9dfc53e63a2 ;
+    cwlprov:basename "format_dssat.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "format_dssat"^^xsd:string .
+
+id:1592a4a2-f41f-4cf1-98ec-a9466cc79e28 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string ;
+    ore:proxyFor id:c3d2cfee-d3b5-4173-a8ad-847c231f267f ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:c3d2cfee-d3b5-4173-a8ad-847c231f267f ;
+    prov:pairKey "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string .
+
+id:185142bf-2cf6-4359-9630-2438644ff959 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string ;
+    ore:proxyFor id:e9634826-ac63-432e-8f53-621335db0b6b ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:e9634826-ac63-432e-8f53-621335db0b6b ;
+    prov:pairKey "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string .
+
+id:1ad6fa4e-c19b-46a1-b250-6393ae1b6a21 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string ;
+    ore:proxyFor id:09ba1e3f-16b4-45fb-a8d0-76e45a7d8861 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:09ba1e3f-16b4-45fb-a8d0-76e45a7d8861 ;
+    prov:pairKey "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string .
+
+id:1e66cd34-f74c-433c-b612-99085e44144c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string ;
+    ore:proxyFor id:1860bf76-385f-4695-9af8-96afccc31046 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:1860bf76-385f-4695-9af8-96afccc31046 ;
+    prov:pairKey "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string .
+
+id:21e64fd8-579c-4662-9427-797e19366c42 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:c77b2b0b-64e1-4765-b28b-07d034f278fe ;
+            prov:atTime "2024-07-23T10:38:37.655742"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/transform_data/transformed.RData> ] ;
+    prov:specializationOf data:44f444585286be0f7497ed5d7d237beb9f746fa5 ;
+    cwlprov:basename "transformed.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "transformed"^^xsd:string .
+
+id:222a9885-782e-4de1-8b74-43b58ab4f49a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string ;
+    ore:proxyFor id:42e880c5-b5eb-45f2-a1b7-f82ff6ad0abe ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:42e880c5-b5eb-45f2-a1b7-f82ff6ad0abe ;
+    prov:pairKey "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string .
+
+id:26f95b8f-479a-426e-9d01-caafc9168634 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string ;
+    ore:proxyFor id:b10e996f-36f2-413c-a3fd-07fec9e5422d ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:b10e996f-36f2-413c-a3fd-07fec9e5422d ;
+    prov:pairKey "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string .
+
+id:28cec09f-606a-439b-b573-d1b1aaf2c0cd a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string ;
+    ore:proxyFor id:8ec1f337-5433-433d-847f-340af5502207 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:8ec1f337-5433-433d-847f-340af5502207 ;
+    prov:pairKey "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string .
+
+id:2db69a0c-07fc-45c9-82a6-ea122625011a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string ;
+    ore:proxyFor id:4f567827-d4fc-471f-a1af-961cbc1d5715 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:4f567827-d4fc-471f-a1af-961cbc1d5715 ;
+    prov:pairKey "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string .
+
+id:304a7f9d-5839-4781-a0e8-a339cc32ccde a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string ;
+    ore:proxyFor id:6d751939-4de0-418e-91e0-cb527c1b6a58 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:6d751939-4de0-418e-91e0-cb527c1b6a58 ;
+    prov:pairKey "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string .
+
+id:37f70b29-4d01-4f1b-b744-c55b6348843d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string ;
+    ore:proxyFor id:98c55b62-65a7-4557-9579-3a05acc06e13 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:98c55b62-65a7-4557-9579-3a05acc06e13 ;
+    prov:pairKey "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string .
+
+id:3d31514a-742e-4937-bfdd-01077abb0c64 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string ;
+    ore:proxyFor id:5ba15a2d-e8e7-4df2-9c06-a822d60deac8 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:5ba15a2d-e8e7-4df2-9c06-a822d60deac8 ;
+    prov:pairKey "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string .
+
+id:3da20a83-9511-4086-916e-29201ca3a995 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen_xls_metadata.xls"^^xsd:string ;
+    ore:proxyFor id:782f6c5d-025d-4d78-b7e2-33b001ed4c95 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:782f6c5d-025d-4d78-b7e2-33b001ed4c95 ;
+    prov:pairKey "lte_seehausen_xls_metadata.xls"^^xsd:string .
+
+id:42f6ba7d-63e1-4b4d-8880-f58ef354ee29 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string ;
+    ore:proxyFor id:dbb1efd0-e917-4eb9-b5b6-f36bda02ee2a ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:dbb1efd0-e917-4eb9-b5b6-f36bda02ee2a ;
+    prov:pairKey "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string .
+
+id:4365f3f3-c305-4243-8b0b-46ab091472c7 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SEDE9401.WTH"^^xsd:string ;
+    ore:proxyFor id:318dd100-398f-4cf3-abfc-afacfc26a5da ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:318dd100-398f-4cf3-abfc-afacfc26a5da ;
+    prov:pairKey "SEDE9401.WTH"^^xsd:string .
+
+id:445dbfef-ac41-4907-8a2e-cf88da384334 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "INFO.OUT"^^xsd:string ;
+    ore:proxyFor id:2771e538-f0cc-492b-ab9d-a63289f7cd07 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:2771e538-f0cc-492b-ab9d-a63289f7cd07 ;
+    prov:pairKey "INFO.OUT"^^xsd:string .
+
+id:448a2111-6ab0-4dc9-a3eb-96e8f9cae008 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string ;
+    ore:proxyFor id:bdf5cc1f-0d0c-4ca1-b169-4394894a4fbf ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:bdf5cc1f-0d0c-4ca1-b169-4394894a4fbf ;
+    prov:pairKey "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string .
+
+id:49bb57bd-978a-4f8c-aa6d-a2d206050872 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string ;
+    ore:proxyFor id:8ec2f2c5-496b-4a82-9968-df8c53233deb ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:8ec2f2c5-496b-4a82-9968-df8c53233deb ;
+    prov:pairKey "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string .
+
+id:4c5363e4-4352-4896-8941-6c89392f6490 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "OUTPUT.LST"^^xsd:string ;
+    ore:proxyFor id:6b9bad2a-e93a-4ee5-9af7-2d89d3d4fca5 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:6b9bad2a-e93a-4ee5-9af7-2d89d3d4fca5 ;
+    prov:pairKey "OUTPUT.LST"^^xsd:string .
+
+id:50486578-0fcf-4227-990c-21075f7cf1ff a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string ;
+    ore:proxyFor id:1a7ff9a1-28f9-4934-aa1d-838d4ea47b10 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:1a7ff9a1-28f9-4934-aa1d-838d4ea47b10 ;
+    prov:pairKey "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string .
+
+id:57bdabda-82bc-4d98-908d-f5a72a75147d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "DSSAT48.INH"^^xsd:string ;
+    ore:proxyFor id:641bce77-a889-42b3-9209-53b7c086efe7 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:641bce77-a889-42b3-9209-53b7c086efe7 ;
+    prov:pairKey "DSSAT48.INH"^^xsd:string .
+
+id:5ab03d74-2176-417f-a7d7-5c340b0e7f7b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string ;
+    ore:proxyFor id:4aa94da5-b9cc-4dfd-ac5b-654c7fc2130f ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:4aa94da5-b9cc-4dfd-ac5b-654c7fc2130f ;
+    prov:pairKey "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string .
+
+id:5f2f3b46-c946-4f7b-ad6a-f75ab2ae720d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string ;
+    ore:proxyFor id:bb706485-6a68-40d3-8293-1a7d3cf4bf7d ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:bb706485-6a68-40d3-8293-1a7d3cf4bf7d ;
+    prov:pairKey "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string .
+
+id:6be2be44-0167-45f1-8eb4-8d90ec2d6561 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string ;
+    ore:proxyFor id:f9d62da4-fd18-4415-af35-1177c8471c66 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:f9d62da4-fd18-4415-af35-1177c8471c66 ;
+    prov:pairKey "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string .
+
+id:6cf10eb9-d38b-4567-8979-2b1c9235ae06 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SEDE.SOL"^^xsd:string ;
+    ore:proxyFor id:3112c628-da00-4a1b-a022-671170b158d9 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:3112c628-da00-4a1b-a022-671170b158d9 ;
+    prov:pairKey "SEDE.SOL"^^xsd:string .
+
+id:749d42bc-dc20-4943-bc2d-a8ad499882f4 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "Summary.OUT"^^xsd:string ;
+    ore:proxyFor id:69238d24-224d-4e31-ad02-6af5156522c4 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:69238d24-224d-4e31-ad02-6af5156522c4 ;
+    prov:pairKey "Summary.OUT"^^xsd:string .
+
+id:77c105ba-0dd0-4045-adfd-110c340dbb4f a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "DSSBatch.V48"^^xsd:string ;
+    ore:proxyFor id:4069ff18-dd03-45f0-8c41-95fb60f925b2 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:4069ff18-dd03-45f0-8c41-95fb60f925b2 ;
+    prov:pairKey "DSSBatch.V48"^^xsd:string .
+
+id:7b00736b-290c-4355-8f78-8aeb92d98b38 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string ;
+    ore:proxyFor id:931152a2-88e6-4e27-a1f7-85f5636d573f ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:931152a2-88e6-4e27-a1f7-85f5636d573f ;
+    prov:pairKey "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string .
+
+id:7b77c9a6-1ef3-4ce4-821f-e8bfc2d51014 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "DSSAT48.INP"^^xsd:string ;
+    ore:proxyFor id:092b9284-bfe0-4bab-ba61-c9b4662f550e ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:092b9284-bfe0-4bab-ba61-c9b4662f550e ;
+    prov:pairKey "DSSAT48.INP"^^xsd:string .
+
+id:7c207a6a-1ec9-4c97-ad5a-15e398cc3110 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string ;
+    ore:proxyFor id:a2b30b70-3ff7-431d-98eb-d88b556bbdfc ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:a2b30b70-3ff7-431d-98eb-d88b556bbdfc ;
+    prov:pairKey "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string .
+
+id:7c6e6073-2581-4978-86e0-270d0a678333 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string ;
+    ore:proxyFor id:83d96b85-fa17-48f4-83f3-6e8a437adb31 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:83d96b85-fa17-48f4-83f3-6e8a437adb31 ;
+    prov:pairKey "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string .
+
+id:80b5dfd6-25f3-43ae-aa2e-4663c2fc1e63 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string ;
+    ore:proxyFor id:0533da98-185c-4c93-a7ef-2c29c1444bb9 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:0533da98-185c-4c93-a7ef-2c29c1444bb9 ;
+    prov:pairKey "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string .
+
+id:83f45a6d-3394-45b3-9b77-7027ca3b90d0 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string ;
+    ore:proxyFor id:f028fa65-db6e-4675-be34-05e63ef4af89 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:f028fa65-db6e-4675-be34-05e63ef4af89 ;
+    prov:pairKey "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string .
+
+id:840752dd-fa22-42c1-b825-76a5ad6aa37c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string ;
+    ore:proxyFor id:d0654e7e-9a58-4520-83df-68e20dd8f792 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:d0654e7e-9a58-4520-83df-68e20dd8f792 ;
+    prov:pairKey "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string .
+
+id:8414ceaa-f407-48dc-b665-ef610974e906 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SoilTemp.OUT"^^xsd:string ;
+    ore:proxyFor id:b956c281-4d6d-4e8f-9154-4aa59dfda922 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:b956c281-4d6d-4e8f-9154-4aa59dfda922 ;
+    prov:pairKey "SoilTemp.OUT"^^xsd:string .
+
+id:88517f63-6726-4a5d-b242-f37652525ffd a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SEDE9501.WHA"^^xsd:string ;
+    ore:proxyFor id:7c9caf3c-ebac-4b24-b504-ec5cf8262e4b ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:7c9caf3c-ebac-4b24-b504-ec5cf8262e4b ;
+    prov:pairKey "SEDE9501.WHA"^^xsd:string .
+
+id:8d34e125-05de-40e5-9f55-27dc66281f4d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string ;
+    ore:proxyFor id:2706c9e2-a05e-46d0-a5a4-084ee807703d ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:2706c9e2-a05e-46d0-a5a4-084ee807703d ;
+    prov:pairKey "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string .
+
+id:8e6a2677-f699-4ffd-b852-ff2ff5bcb0fc a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string ;
+    ore:proxyFor id:d883355d-5b80-4f69-aa68-c6248962f685 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:d883355d-5b80-4f69-aa68-c6248962f685 ;
+    prov:pairKey "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string .
+
+id:90d1491e-9f0c-4799-b252-1d36a27790a6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen_xls_metadata.xls"^^xsd:string ;
+    ore:proxyFor id:56f3e1d8-8dda-465e-844e-dcd0421958b9 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:56f3e1d8-8dda-465e-844e-dcd0421958b9 ;
+    prov:pairKey "lte_seehausen_xls_metadata.xls"^^xsd:string .
+
+id:911b48ce-d20c-46c3-a2e5-272384aece5b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "WARNING.OUT"^^xsd:string ;
+    ore:proxyFor id:6541c157-da07-4f68-b03b-550b5ecc0d2d ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:6541c157-da07-4f68-b03b-550b5ecc0d2d ;
+    prov:pairKey "WARNING.OUT"^^xsd:string .
+
+id:912ef9b1-147d-41c6-adc7-963c10059cc8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string ;
+    ore:proxyFor id:56478d95-a23a-4ceb-afc1-53e980307bc3 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:56478d95-a23a-4ceb-afc1-53e980307bc3 ;
+    prov:pairKey "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string .
+
+id:92c20b56-3405-4259-8699-5b662fcfad4a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "PlantGro.OUT"^^xsd:string ;
+    ore:proxyFor id:3ec54df9-3bc8-414e-a1da-3708892584b4 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:3ec54df9-3bc8-414e-a1da-3708892584b4 ;
+    prov:pairKey "PlantGro.OUT"^^xsd:string .
+
+id:93c524f3-22ec-4ed4-8bfe-314db3fc9f11 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string ;
+    ore:proxyFor id:183d13d7-ab9f-4fd1-aa32-4ec86e7fb9ec ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:183d13d7-ab9f-4fd1-aa32-4ec86e7fb9ec ;
+    prov:pairKey "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string .
+
+id:9575c4da-b2e8-4db0-98a9-29ee235fdfe6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string ;
+    ore:proxyFor id:55bb137b-b6c9-42c1-8a7b-4b98b52b7763 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:55bb137b-b6c9-42c1-8a7b-4b98b52b7763 ;
+    prov:pairKey "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string .
+
+id:97ddf0e1-50bd-4178-82f7-d1df75fa084a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string ;
+    ore:proxyFor id:0d153f32-0a5b-42f2-ac7e-e00ebbf5070c ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:0d153f32-0a5b-42f2-ac7e-e00ebbf5070c ;
+    prov:pairKey "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string .
+
+id:99813818-9859-4696-8e88-359243713ef7 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string ;
+    ore:proxyFor id:059570f6-d371-43c6-b785-789c238933c9 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:059570f6-d371-43c6-b785-789c238933c9 ;
+    prov:pairKey "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string .
+
+id:9a7eb1d9-d122-405d-bcc0-33681cecfa4f a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "simulation.R"^^xsd:string ;
+    ore:proxyFor id:4a209ff3-b480-4a0f-a8cc-aa4d6a4ad168 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:4a209ff3-b480-4a0f-a8cc-aa4d6a4ad168 ;
+    prov:pairKey "simulation.R"^^xsd:string .
+
+id:9b2496d2-f6ea-41e4-a3d5-b2b2e383e895 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string ;
+    ore:proxyFor id:9e1ee43c-d859-409f-8c28-4f7e9eb1aff7 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:9e1ee43c-d859-409f-8c28-4f7e9eb1aff7 ;
+    prov:pairKey "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string .
+
+id:9c9d2647-6d15-4de1-ac03-d0b4a998477b a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/format_dssat"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:50:27.191971"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:50:00.325124"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:00.326924"^^xsd:dateTime ;
+            prov:entity id:f5235d36-7aa1-4005-8871-3ff9c8ab2710 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat/mapped_dssat_RData> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:50:00.326977"^^xsd:dateTime ;
+            prov:entity id:5f59ae70-3633-48d4-882d-28577a41faa6 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/format_dssat/weather_comments_RData> ] ;
+    prov:wasAssociatedWith id:0a63708f-6aa9-4b95-9e64-8dfbee2e3b6c,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:9d44c395-05f1-4930-9800-05b477f2d1b7 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string ;
+    ore:proxyFor id:87c8a40d-a2cc-42b3-aa11-6d59f634dbd4 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:87c8a40d-a2cc-42b3-aa11-6d59f634dbd4 ;
+    prov:pairKey "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string .
+
+id:9e929c9b-eb79-486b-8ecd-9ae5cb4cd9be a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string ;
+    ore:proxyFor id:fb27cee5-b787-4437-9120-02433c6baa72 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:fb27cee5-b787-4437-9120-02433c6baa72 ;
+    prov:pairKey "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string .
+
+id:9f3b7367-ca39-4215-b9a1-7414d0199898 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string ;
+    ore:proxyFor id:2dac13dc-ef94-481c-b7d6-f99874bfb177 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:2dac13dc-ef94-481c-b7d6-f99874bfb177 ;
+    prov:pairKey "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string .
+
+id:9f8b88d8-5597-49ed-8356-a11c0b3bf201 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/map_weather"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:49:34.550163"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:49:27.571339"^^xsd:dateTime ;
+            prov:hadActivity id:ab37b448-30e2-44f7-9893-4e6e4d064959 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:49:27.573264"^^xsd:dateTime ;
+            prov:entity id:b6cd1f13-79d1-4eef-94d6-3fa0df4ec388 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather/mapped_icasa_RData> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:49:27.573314"^^xsd:dateTime ;
+            prov:entity id:187b504f-4eda-4fb6-aefd-1f6a30e323e3 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/map_weather/weather_stations_RData> ] ;
+    prov:wasAssociatedWith id:ac5153c0-6cdb-4366-9b14-004eefb0f0c1,
+        id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:a5abea01-8fe3-4ccc-a155-f30c9dac8ed5 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string ;
+    ore:proxyFor id:9287d6f3-23ce-4448-8e4f-71b8640715db ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:9287d6f3-23ce-4448-8e4f-71b8640715db ;
+    prov:pairKey "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string .
+
+id:a9161c0c-8be4-4570-bbab-5740be0039e6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string ;
+    ore:proxyFor id:697d327a-d3c2-42f8-a065-14dce1ee337e ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:697d327a-d3c2-42f8-a065-14dce1ee337e ;
+    prov:pairKey "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string .
+
+id:a9a9cb57-c7e9-4ca6-925f-a6d8ecacb7f9 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SEDE9501.WTH"^^xsd:string ;
+    ore:proxyFor id:b7f84b3e-5139-48f6-80d7-2cb864be2f02 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:b7f84b3e-5139-48f6-80d7-2cb864be2f02 ;
+    prov:pairKey "SEDE9501.WTH"^^xsd:string .
+
+id:aa27f41e-7da8-486d-a7bf-622317262d5d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string ;
+    ore:proxyFor id:df400cef-5bdf-49f1-8b1e-11d82d8cccd2 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:df400cef-5bdf-49f1-8b1e-11d82d8cccd2 ;
+    prov:pairKey "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string .
+
+id:adc59f40-5ec8-47f2-90a9-6a933a15159b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string ;
+    ore:proxyFor id:98c3ca4d-170c-43c5-92f8-4dfefb6a4e1a ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:98c3ca4d-170c-43c5-92f8-4dfefb6a4e1a ;
+    prov:pairKey "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string .
+
+id:b145cc07-fc15-4775-bf4a-e3855d64339c a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:6b32bfd0-ad40-4152-8cb2-9e3c9f2cf898 ;
+            prov:atTime "2024-07-23T10:38:32.011868"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/reshape_data/reshaped.RData> ] ;
+    prov:specializationOf data:d2c76a509e92d946332b08e2f03a847fa5ebd419 ;
+    cwlprov:basename "reshaped.RData"^^xsd:string ;
+    cwlprov:nameext ".RData"^^xsd:string ;
+    cwlprov:nameroot "reshaped"^^xsd:string .
+
+id:b280b4ed-edef-47ab-8cdc-fcedcc5693d8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string ;
+    ore:proxyFor id:9a333066-d535-4d79-883e-0a63f8bae51b ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:9a333066-d535-4d79-883e-0a63f8bae51b ;
+    prov:pairKey "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string .
+
+id:b6d58bde-4aec-4c69-b07a-a6baf9ba0755 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "RunList.OUT"^^xsd:string ;
+    ore:proxyFor id:759d8291-8fb1-4e91-a9cc-3903e24d52db ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:759d8291-8fb1-4e91-a9cc-3903e24d52db ;
+    prov:pairKey "RunList.OUT"^^xsd:string .
+
+id:bae691ed-b11c-4192-a119-3cf11e4e2972 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "WHAPS048.CUL"^^xsd:string ;
+    ore:proxyFor id:cfc8ca02-85ab-46fa-82d0-6de157a9be30 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:cfc8ca02-85ab-46fa-82d0-6de157a9be30 ;
+    prov:pairKey "WHAPS048.CUL"^^xsd:string .
+
+id:baeb29ca-c3cd-482a-b953-0818a9037f87 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string ;
+    ore:proxyFor id:27051655-d476-4804-ad44-b0e972a0358b ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:27051655-d476-4804-ad44-b0e972a0358b ;
+    prov:pairKey "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string .
+
+id:c2cdbc96-043d-4699-a3ac-7057e0fd1a1b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string ;
+    ore:proxyFor id:ba6bb0e4-c5ba-46f3-962c-3aa1cc514cce ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:ba6bb0e4-c5ba-46f3-962c-3aa1cc514cce ;
+    prov:pairKey "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string .
+
+id:c3a39ec3-52c8-4a75-9d6f-d671d0236273 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string ;
+    ore:proxyFor id:de441d92-a5e9-4801-a7ac-66a0c7e7c017 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:de441d92-a5e9-4801-a7ac-66a0c7e7c017 ;
+    prov:pairKey "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string .
+
+id:d15c548c-9b3a-4aef-9beb-d38831c4cfbf a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string ;
+    ore:proxyFor id:08f93730-d201-44cb-879b-dfaf5acb1fa7 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:08f93730-d201-44cb-879b-dfaf5acb1fa7 ;
+    prov:pairKey "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string .
+
+id:d20df701-2bdb-4c34-bdbb-2b95ec5a7ae8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string ;
+    ore:proxyFor id:051cac06-2f63-4b54-be62-e05a4a101b1d ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:051cac06-2f63-4b54-be62-e05a4a101b1d ;
+    prov:pairKey "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string .
+
+id:dee16662-8eb4-439f-be41-952466bf62b5 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string ;
+    ore:proxyFor id:a76a1719-2b26-4635-994b-33b43c1a0fb5 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:a76a1719-2b26-4635-994b-33b43c1a0fb5 ;
+    prov:pairKey "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string .
+
+id:e0365b42-231a-4fda-9228-80496149cbbc a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SEDE9501.WHX"^^xsd:string ;
+    ore:proxyFor id:c1b2942c-8e35-4d3f-9270-0ae6696ab75a ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:c1b2942c-8e35-4d3f-9270-0ae6696ab75a ;
+    prov:pairKey "SEDE9501.WHX"^^xsd:string .
+
+id:e0b180c7-e9f8-4772-b22c-7756062a4ea2 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string ;
+    ore:proxyFor id:9c0596e7-b42f-4c4a-ac40-f28785da0362 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:9c0596e7-b42f-4c4a-ac40-f28785da0362 ;
+    prov:pairKey "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string .
+
+id:e18279be-61b7-4833-ae64-6a17a906f088 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string ;
+    ore:proxyFor id:671ce7ba-ca83-4a63-9244-f5cb4638e6d1 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:671ce7ba-ca83-4a63-9244-f5cb4638e6d1 ;
+    prov:pairKey "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string .
+
+id:e1ee9e2b-d436-458c-9524-a9f9792da266 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string ;
+    ore:proxyFor id:f74f7fdb-a8ea-4d40-9ae1-0213fd2417ea ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:f74f7fdb-a8ea-4d40-9ae1-0213fd2417ea ;
+    prov:pairKey "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string .
+
+id:e52afeb5-6591-40bb-9ba0-5413bceef601 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string ;
+    ore:proxyFor id:9ba9d2b5-7fd3-48f2-abe8-7d91c3a59f22 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:9ba9d2b5-7fd3-48f2-abe8-7d91c3a59f22 ;
+    prov:pairKey "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string .
+
+id:e91a083c-a11a-4a52-9adf-e2f25410b83e a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string ;
+    ore:proxyFor id:aeeb4aa5-65e7-4f25-bb61-e7cae78ff9b3 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:aeeb4aa5-65e7-4f25-bb61-e7cae78ff9b3 ;
+    prov:pairKey "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string .
+
+id:e9d300e5-9fca-4528-89c0-c9c859ca0355 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "Weather.OUT"^^xsd:string ;
+    ore:proxyFor id:e82f63d5-65c3-4d3f-b436-50c0315fa9e8 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:e82f63d5-65c3-4d3f-b436-50c0315fa9e8 ;
+    prov:pairKey "Weather.OUT"^^xsd:string .
+
+id:ed6cc753-a059-40e9-a5cc-511479b2e63c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string ;
+    ore:proxyFor id:e51e740a-85f6-4a6c-b102-8ce6bef924b6 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:e51e740a-85f6-4a6c-b102-8ce6bef924b6 ;
+    prov:pairKey "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string .
+
+id:ee82ee6f-cbea-4955-9dae-eb065c2a99d8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string ;
+    ore:proxyFor id:ef0c53c4-431b-4d0c-a825-830869e9bf75 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:ef0c53c4-431b-4d0c-a825-830869e9bf75 ;
+    prov:pairKey "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string .
+
+id:f137b0ee-55b7-4145-be65-01589573d5b0 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string ;
+    ore:proxyFor id:98f66891-2ed6-4efa-89fe-7146bf9526ec ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:98f66891-2ed6-4efa-89fe-7146bf9526ec ;
+    prov:pairKey "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string .
+
+id:f3c7904e-4b39-407f-8723-6db119affddf a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "SOIL.SOL"^^xsd:string ;
+    ore:proxyFor id:61c17789-a1c6-462c-aab3-c5f1bc9b615a ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:61c17789-a1c6-462c-aab3-c5f1bc9b615a ;
+    prov:pairKey "SOIL.SOL"^^xsd:string .
+
+id:f40e864c-015a-4271-a112-abc4ad95bc96 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "Evaluate.OUT"^^xsd:string ;
+    ore:proxyFor id:5c82a42c-4158-4e0b-ac77-a251c171da69 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:5c82a42c-4158-4e0b-ac77-a251c171da69 ;
+    prov:pairKey "Evaluate.OUT"^^xsd:string .
+
+id:f423b4f9-e9de-4d36-8a38-05c30ac9a878 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string ;
+    ore:proxyFor id:6f5d8b15-c6fa-4ee5-94a9-1f78a4544868 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:6f5d8b15-c6fa-4ee5-94a9-1f78a4544868 ;
+    prov:pairKey "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string .
+
+id:f46fcdcc-3fca-4b95-a6a3-264e0c1afd21 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string ;
+    ore:proxyFor id:2ed4d568-699b-46b7-9c5d-f8e849e52ff2 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:2ed4d568-699b-46b7-9c5d-f8e849e52ff2 ;
+    prov:pairKey "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string .
+
+id:f481cdb7-164a-45d5-a711-038688f4c58a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string ;
+    ore:proxyFor id:f3706dca-dabd-47a9-8c7c-0695664bd671 ;
+    ore:proxyIn id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 ;
+    prov:pairEntity id:f3706dca-dabd-47a9-8c7c-0695664bd671 ;
+    prov:pairKey "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string .
+
+id:f638d670-64e8-4f46-8fd6-a165b2f284b4 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "OVERVIEW.OUT"^^xsd:string ;
+    ore:proxyFor id:28a8ea16-ec34-4557-a007-c8d8490b9cd5 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:28a8ea16-ec34-4557-a007-c8d8490b9cd5 ;
+    prov:pairKey "OVERVIEW.OUT"^^xsd:string .
+
+id:f7f0b6d9-5e70-47e0-ad49-3d453a4d7028 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "format_dssat.RData"^^xsd:string ;
+    ore:proxyFor id:9f2c3205-a47c-4d57-a728-9ffc93be3405 ;
+    ore:proxyIn id:1ad0d3a2-04d1-43e9-921f-8a911866918d ;
+    prov:pairEntity id:9f2c3205-a47c-4d57-a728-9ffc93be3405 ;
+    prov:pairKey "format_dssat.RData"^^xsd:string .
+
+id:fc632ca5-ca12-4eff-8cff-5b266bdea06b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity,
+        prov:KeyEntityPair ;
+    ro:entryName "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string ;
+    ore:proxyFor id:06ac8ac1-9b30-4cdb-ade4-6140c6a69401 ;
+    ore:proxyIn id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+    prov:pairEntity id:06ac8ac1-9b30-4cdb-ade4-6140c6a69401 ;
+    prov:pairKey "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string .
+
+id:051cac06-2f63-4b54-be62-e05a4a101b1d a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:309bf760428dd1225d166bc1a6c8010b8c3a19e9 ;
+    cwlprov:basename "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string .
+
+id:0533da98-185c-4c93-a7ef-2c29c1444bb9 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:8c28f817f750d2f072164f248455974df704a4e4 ;
+    cwlprov:basename "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string .
+
+id:059570f6-d371-43c6-b785-789c238933c9 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:de2f41561a414a222aadd85eaeefbe8677dd23b1 ;
+    cwlprov:basename "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string .
+
+id:06ac8ac1-9b30-4cdb-ade4-6140c6a69401 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:48a567af461f45e02bd9d6b61539cbe164ace9af ;
+    cwlprov:basename "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string .
+
+id:08f93730-d201-44cb-879b-dfaf5acb1fa7 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:0a7152192964c8080e07fe8977be181c5a191d1d ;
+    cwlprov:basename "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string .
+
+id:092b9284-bfe0-4bab-ba61-c9b4662f550e a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:43985cd29b2f43bcb102e6623dee548d47072748 ;
+    cwlprov:basename "DSSAT48.INP"^^xsd:string .
+
+id:09ba1e3f-16b4-45fb-a8d0-76e45a7d8861 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:f48cb78256cdb7516437381d0251ed59eb8c1b45 ;
+    cwlprov:basename "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string .
+
+id:0d153f32-0a5b-42f2-ac7e-e00ebbf5070c a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:43b62a6ff9d19029cf4e7a42db6eff36f96ae9b8 ;
+    cwlprov:basename "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string .
+
+id:183d13d7-ab9f-4fd1-aa32-4ec86e7fb9ec a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:309bf760428dd1225d166bc1a6c8010b8c3a19e9 ;
+    cwlprov:basename "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string .
+
+id:1860bf76-385f-4695-9af8-96afccc31046 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:8c28f817f750d2f072164f248455974df704a4e4 ;
+    cwlprov:basename "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string .
+
+id:1a7ff9a1-28f9-4934-aa1d-838d4ea47b10 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:6aa43bb4128325f98482bc90d4c5b8c129c7ac06 ;
+    cwlprov:basename "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string .
+
+id:27051655-d476-4804-ad44-b0e972a0358b a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:b645d0414a1b5546fe3d496e6ae5f69b64e1d377 ;
+    cwlprov:basename "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string .
+
+id:2706c9e2-a05e-46d0-a5a4-084ee807703d a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:88f908ed48752180e0e9a694ea907f7b5ed2f9b5 ;
+    cwlprov:basename "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string .
+
+id:2771e538-f0cc-492b-ab9d-a63289f7cd07 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:4b00f1bf4949f1ec762ed46148551af24c2fe712 ;
+    cwlprov:basename "INFO.OUT"^^xsd:string .
+
+id:28a8ea16-ec34-4557-a007-c8d8490b9cd5 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:27a398e965a7f7f1737c45b29dcd211aa715407f ;
+    cwlprov:basename "OVERVIEW.OUT"^^xsd:string .
+
+id:2dac13dc-ef94-481c-b7d6-f99874bfb177 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:d4dd10f6f635a5d3adffa06fa06be149e54563ad ;
+    cwlprov:basename "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string .
+
+id:2ed4d568-699b-46b7-9c5d-f8e849e52ff2 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:18ecc39c238ef26a0ddb6e8eb4750644b07a0d24 ;
+    cwlprov:basename "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string .
+
+id:3112c628-da00-4a1b-a022-671170b158d9 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:671b545cfca70c427b94daabe900c2cc1ef7d7d4 ;
+    cwlprov:basename "SEDE.SOL"^^xsd:string .
+
+id:318dd100-398f-4cf3-abfc-afacfc26a5da a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:4a916a2d21c5aaab5d54d0b3bc4ea87fabb1681d ;
+    cwlprov:basename "SEDE9401.WTH"^^xsd:string .
+
+id:3e6c94c2-0224-4817-bb81-508cacbfea8b a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:23cf621d3f8a5d81241afb6e9d91592491800c01 ;
+    cwlprov:basename "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string .
+
+id:3ec54df9-3bc8-414e-a1da-3708892584b4 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:e53316a801a5c283ced0d802e0fa8b887c4bb037 ;
+    cwlprov:basename "PlantGro.OUT"^^xsd:string .
+
+id:4069ff18-dd03-45f0-8c41-95fb60f925b2 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:c3eba95273fb7cd540d0d076b086acb43344ae94 ;
+    cwlprov:basename "DSSBatch.V48"^^xsd:string .
+
+id:42e880c5-b5eb-45f2-a1b7-f82ff6ad0abe a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:4f85f985e80e8593057082be8e82e0b97fe6c0ce ;
+    cwlprov:basename "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string .
+
+id:4a209ff3-b480-4a0f-a8cc-aa4d6a4ad168 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:651a45c0ba1932765a7f031a2bbb81f246a5b5dc ;
+    cwlprov:basename "simulation.R"^^xsd:string .
+
+id:4aa94da5-b9cc-4dfd-ac5b-654c7fc2130f a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:4aa0fdd11f391400ea15358132982b6df0b04084 ;
+    cwlprov:basename "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string .
+
+id:4c2bab59-c782-478f-b103-e2382acbd652 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:2e06ee20ca188a239477c0082989fc2e6b649c13 ;
+    cwlprov:basename "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string .
+
+id:4f567827-d4fc-471f-a1af-961cbc1d5715 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:5571077db93775f0a993e358a4cfcef6cd60d47f ;
+    cwlprov:basename "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string .
+
+id:55bb137b-b6c9-42c1-8a7b-4b98b52b7763 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:9a3c89e3f7fdadb87aba9fba38c052c368d23947 ;
+    cwlprov:basename "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string .
+
+id:56478d95-a23a-4ceb-afc1-53e980307bc3 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:375054a2d82b73e9b7dc7f33cf6cb58a0bb97141 ;
+    cwlprov:basename "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string .
+
+id:56f3e1d8-8dda-465e-844e-dcd0421958b9 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:fe16e043d47112f276de632fdd1bd461bb666006 ;
+    cwlprov:basename "lte_seehausen_xls_metadata.xls"^^xsd:string .
+
+id:5ba15a2d-e8e7-4df2-9c06-a822d60deac8 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:ae58a54de752d13bd4680914e8dc626265933a4b ;
+    cwlprov:basename "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string .
+
+id:5c070426-5bca-45ca-8fcb-42f9e40fcecc a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:c1f20b26f3c760125de006ff64c2d0e1630702a8 ;
+    cwlprov:basename "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string .
+
+id:5c82a42c-4158-4e0b-ac77-a251c171da69 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:a3c5543caa1f89461990bd7cbb45f80a20cc4759 ;
+    cwlprov:basename "Evaluate.OUT"^^xsd:string .
+
+id:61c17789-a1c6-462c-aab3-c5f1bc9b615a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:910375771bce9382f9467f50bc7b13d7cf25af00 ;
+    cwlprov:basename "SOIL.SOL"^^xsd:string .
+
+id:641bce77-a889-42b3-9209-53b7c086efe7 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:76fc1ada445f861583a11426ca351faf59ebbb3b ;
+    cwlprov:basename "DSSAT48.INH"^^xsd:string .
+
+id:6541c157-da07-4f68-b03b-550b5ecc0d2d a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:75b0f973b5c3da2e39de539c5057b1f552fc3f8c ;
+    cwlprov:basename "WARNING.OUT"^^xsd:string .
+
+id:671ce7ba-ca83-4a63-9244-f5cb4638e6d1 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:2ea39399220c41b02c62e8fa67d1d3066f99e8b3 ;
+    cwlprov:basename "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string .
+
+id:69238d24-224d-4e31-ad02-6af5156522c4 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:dcbaa98c3b4a7fd6157322508deecb484c1d9866 ;
+    cwlprov:basename "Summary.OUT"^^xsd:string .
+
+id:697d327a-d3c2-42f8-a065-14dce1ee337e a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:27fc93539f850145055d9b52bca69bf0e0da379a ;
+    cwlprov:basename "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string .
+
+id:6b9bad2a-e93a-4ee5-9af7-2d89d3d4fca5 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:d3bd568ee4ffd986bb792104a179e8f3e44862e5 ;
+    cwlprov:basename "OUTPUT.LST"^^xsd:string .
+
+id:6d751939-4de0-418e-91e0-cb527c1b6a58 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:23cf621d3f8a5d81241afb6e9d91592491800c01 ;
+    cwlprov:basename "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string .
+
+id:6f5d8b15-c6fa-4ee5-94a9-1f78a4544868 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:f48cb78256cdb7516437381d0251ed59eb8c1b45 ;
+    cwlprov:basename "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string .
+
+id:759d8291-8fb1-4e91-a9cc-3903e24d52db a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:642abcc3d774d41f9ba6caf151a2b4b81b3006fd ;
+    cwlprov:basename "RunList.OUT"^^xsd:string .
+
+id:782f6c5d-025d-4d78-b7e2-33b001ed4c95 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:fe16e043d47112f276de632fdd1bd461bb666006 ;
+    cwlprov:basename "lte_seehausen_xls_metadata.xls"^^xsd:string .
+
+id:7c9caf3c-ebac-4b24-b504-ec5cf8262e4b a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:1c40997325f60cff4959204a2bcafe36e9fc4449 ;
+    cwlprov:basename "SEDE9501.WHA"^^xsd:string .
+
+id:83d96b85-fa17-48f4-83f3-6e8a437adb31 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:7a206a0b06400a4174e4a533ade9281b30908d74 ;
+    cwlprov:basename "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string .
+
+id:87c8a40d-a2cc-42b3-aa11-6d59f634dbd4 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:2fb74015d4d04975f2cf7deeec3e5d7368bc7d46 ;
+    cwlprov:basename "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string .
+
+id:8ec1f337-5433-433d-847f-340af5502207 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:48a567af461f45e02bd9d6b61539cbe164ace9af ;
+    cwlprov:basename "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string .
+
+id:8ec2f2c5-496b-4a82-9968-df8c53233deb a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:18ecc39c238ef26a0ddb6e8eb4750644b07a0d24 ;
+    cwlprov:basename "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string .
+
+id:9287d6f3-23ce-4448-8e4f-71b8640715db a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:5ca5732a8ac57b82ece9d92a4dd69fdaf54284d8 ;
+    cwlprov:basename "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string .
+
+id:931152a2-88e6-4e27-a1f7-85f5636d573f a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:b645d0414a1b5546fe3d496e6ae5f69b64e1d377 ;
+    cwlprov:basename "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string .
+
+id:98c3ca4d-170c-43c5-92f8-4dfefb6a4e1a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:aa4b1ca4877c5c5300b709f9025b5f8dc078a222 ;
+    cwlprov:basename "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string .
+
+id:98c55b62-65a7-4557-9579-3a05acc06e13 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:ae58a54de752d13bd4680914e8dc626265933a4b ;
+    cwlprov:basename "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string .
+
+id:98f66891-2ed6-4efa-89fe-7146bf9526ec a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:c1f20b26f3c760125de006ff64c2d0e1630702a8 ;
+    cwlprov:basename "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string .
+
+id:9a333066-d535-4d79-883e-0a63f8bae51b a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:6aa43bb4128325f98482bc90d4c5b8c129c7ac06 ;
+    cwlprov:basename "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string .
+
+id:9ba9d2b5-7fd3-48f2-abe8-7d91c3a59f22 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:3b2df9250e1d6688cc6700cd305e3532b99468e7 ;
+    cwlprov:basename "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string .
+
+id:9c0596e7-b42f-4c4a-ac40-f28785da0362 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:27fc93539f850145055d9b52bca69bf0e0da379a ;
+    cwlprov:basename "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string .
+
+id:9e1ee43c-d859-409f-8c28-4f7e9eb1aff7 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:2ea39399220c41b02c62e8fa67d1d3066f99e8b3 ;
+    cwlprov:basename "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string .
+
+id:9f2c3205-a47c-4d57-a728-9ffc93be3405 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:dbc23100ba11880be3f336986cf9b9dfc53e63a2 ;
+    cwlprov:basename "format_dssat.RData"^^xsd:string .
+
+id:a2b30b70-3ff7-431d-98eb-d88b556bbdfc a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:9a3c89e3f7fdadb87aba9fba38c052c368d23947 ;
+    cwlprov:basename "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string .
+
+id:a76a1719-2b26-4635-994b-33b43c1a0fb5 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:4aa0fdd11f391400ea15358132982b6df0b04084 ;
+    cwlprov:basename "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string .
+
+id:aeeb4aa5-65e7-4f25-bb61-e7cae78ff9b3 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:2e06ee20ca188a239477c0082989fc2e6b649c13 ;
+    cwlprov:basename "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string .
+
+id:b10e996f-36f2-413c-a3fd-07fec9e5422d a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:375054a2d82b73e9b7dc7f33cf6cb58a0bb97141 ;
+    cwlprov:basename "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string .
+
+id:b43f900e-dc5b-40ec-98b4-a2dfe70f12f3 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:598737e7fda7d749f70a7306bb33de102c6b31de ;
+    cwlprov:basename "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string .
+
+id:b7f84b3e-5139-48f6-80d7-2cb864be2f02 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:13bbeb19d622f96a6620745d5fa3c2514aef2aa7 ;
+    cwlprov:basename "SEDE9501.WTH"^^xsd:string .
+
+id:b956c281-4d6d-4e8f-9154-4aa59dfda922 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:cd09d3c7895ad78d66b18373347b8dd91e5dc51a ;
+    cwlprov:basename "SoilTemp.OUT"^^xsd:string .
+
+id:ba6bb0e4-c5ba-46f3-962c-3aa1cc514cce a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:4f85f985e80e8593057082be8e82e0b97fe6c0ce ;
+    cwlprov:basename "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string .
+
+id:bb706485-6a68-40d3-8293-1a7d3cf4bf7d a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:9e90737e8747a204d4d042d62436fb2715474a42 ;
+    cwlprov:basename "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string .
+
+id:bdf5cc1f-0d0c-4ca1-b169-4394894a4fbf a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:de2f41561a414a222aadd85eaeefbe8677dd23b1 ;
+    cwlprov:basename "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string .
+
+id:c1b2942c-8e35-4d3f-9270-0ae6696ab75a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:10167b39f1910f8c21151947294857f160e98f5d ;
+    cwlprov:basename "SEDE9501.WHX"^^xsd:string .
+
+id:c3d2cfee-d3b5-4173-a8ad-847c231f267f a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:0f0b5a684fb5971be7f48601bde7b0b301d5b4b3 ;
+    cwlprov:basename "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string .
+
+id:cfc8ca02-85ab-46fa-82d0-6de157a9be30 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:406aae59358a34fb466387747e3d72860346dc53 ;
+    cwlprov:basename "WHAPS048.CUL"^^xsd:string .
+
+id:d0654e7e-9a58-4520-83df-68e20dd8f792 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:2fb74015d4d04975f2cf7deeec3e5d7368bc7d46 ;
+    cwlprov:basename "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string .
+
+id:d883355d-5b80-4f69-aa68-c6248962f685 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:5ca5732a8ac57b82ece9d92a4dd69fdaf54284d8 ;
+    cwlprov:basename "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string .
+
+id:dbb1efd0-e917-4eb9-b5b6-f36bda02ee2a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:52cb38c167b794037d6958a887783b707fcd2d20 ;
+    cwlprov:basename "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string .
+
+id:de441d92-a5e9-4801-a7ac-66a0c7e7c017 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:598737e7fda7d749f70a7306bb33de102c6b31de ;
+    cwlprov:basename "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string .
+
+id:df400cef-5bdf-49f1-8b1e-11d82d8cccd2 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:0f0b5a684fb5971be7f48601bde7b0b301d5b4b3 ;
+    cwlprov:basename "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string .
+
+id:e2e63eba-2c9e-4a1a-a9c3-118820699d3a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:43b62a6ff9d19029cf4e7a42db6eff36f96ae9b8 ;
+    cwlprov:basename "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string .
+
+id:e51e740a-85f6-4a6c-b102-8ce6bef924b6 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:9e90737e8747a204d4d042d62436fb2715474a42 ;
+    cwlprov:basename "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string .
+
+id:e82f63d5-65c3-4d3f-b436-50c0315fa9e8 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:b30efc5cfd9b622b4946a17d09fc29582b87076e ;
+    cwlprov:basename "Weather.OUT"^^xsd:string .
+
+id:e9634826-ac63-432e-8f53-621335db0b6b a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:52cb38c167b794037d6958a887783b707fcd2d20 ;
+    cwlprov:basename "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string .
+
+id:ef0c53c4-431b-4d0c-a825-830869e9bf75 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:3b2df9250e1d6688cc6700cd305e3532b99468e7 ;
+    cwlprov:basename "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string .
+
+id:f028fa65-db6e-4675-be34-05e63ef4af89 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:d4dd10f6f635a5d3adffa06fa06be149e54563ad ;
+    cwlprov:basename "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string .
+
+id:f3706dca-dabd-47a9-8c7c-0695664bd671 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:7a206a0b06400a4174e4a533ade9281b30908d74 ;
+    cwlprov:basename "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string .
+
+id:f74f7fdb-a8ea-4d40-9ae1-0213fd2417ea a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:aa4b1ca4877c5c5300b709f9025b5f8dc078a222 ;
+    cwlprov:basename "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string .
+
+id:f9d62da4-fd18-4415-af35-1177c8471c66 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:88f908ed48752180e0e9a694ea907f7b5ed2f9b5 ;
+    cwlprov:basename "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string .
+
+id:fb27cee5-b787-4437-9120-02433c6baa72 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:5571077db93775f0a993e358a4cfcef6cd60d47f ;
+    cwlprov:basename "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string .
+
+id:fe748200-81ee-4fad-9ab3-b4a599c24361 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:0a7152192964c8080e07fe8977be181c5a191d1d ;
+    cwlprov:basename "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string .
+
+data:910375771bce9382f9467f50bc7b13d7cf25af00 a wfprov:Artifact,
+        prov:Entity .
+
+data:fe16e043d47112f276de632fdd1bd461bb666006 a wfprov:Artifact,
+        prov:Entity .
+
+id:c5ba612b-3201-4b19-9925-5efededfd632 a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 3.1.20240708091337"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:29:49.359428"^^xsd:dateTime ;
+            prov:hadActivity id:1a2f580b-d94b-4d55-b708-416ea3a2a899 ] .
+
+id:1ad0d3a2-04d1-43e9-921f-8a911866918d a ro:Folder,
+        wfprov:Artifact,
+        ore:Aggregation,
+        prov:Collection,
+        prov:Dictionary,
+        prov:Entity ;
+    ore:aggregates id:4365f3f3-c305-4243-8b0b-46ab091472c7,
+        id:445dbfef-ac41-4907-8a2e-cf88da384334,
+        id:4c5363e4-4352-4896-8941-6c89392f6490,
+        id:57bdabda-82bc-4d98-908d-f5a72a75147d,
+        id:6cf10eb9-d38b-4567-8979-2b1c9235ae06,
+        id:749d42bc-dc20-4943-bc2d-a8ad499882f4,
+        id:77c105ba-0dd0-4045-adfd-110c340dbb4f,
+        id:7b77c9a6-1ef3-4ce4-821f-e8bfc2d51014,
+        id:8414ceaa-f407-48dc-b665-ef610974e906,
+        id:88517f63-6726-4a5d-b242-f37652525ffd,
+        id:911b48ce-d20c-46c3-a2e5-272384aece5b,
+        id:92c20b56-3405-4259-8699-5b662fcfad4a,
+        id:9a7eb1d9-d122-405d-bcc0-33681cecfa4f,
+        id:a9a9cb57-c7e9-4ca6-925f-a6d8ecacb7f9,
+        id:b6d58bde-4aec-4c69-b07a-a6baf9ba0755,
+        id:bae691ed-b11c-4192-a119-3cf11e4e2972,
+        id:e0365b42-231a-4fda-9228-80496149cbbc,
+        id:e9d300e5-9fca-4528-89c0-c9c859ca0355,
+        id:f3c7904e-4b39-407f-8723-6db119affddf,
+        id:f40e864c-015a-4271-a112-abc4ad95bc96,
+        id:f638d670-64e8-4f46-8fd6-a165b2f284b4,
+        id:f7f0b6d9-5e70-47e0-ad49-3d453a4d7028 ;
+    ore:isDescribedBy metadata:directory-1ad0d3a2-04d1-43e9-921f-8a911866918d.ttl ;
+    prov:hadDictionaryMember id:4365f3f3-c305-4243-8b0b-46ab091472c7,
+        id:445dbfef-ac41-4907-8a2e-cf88da384334,
+        id:4c5363e4-4352-4896-8941-6c89392f6490,
+        id:57bdabda-82bc-4d98-908d-f5a72a75147d,
+        id:6cf10eb9-d38b-4567-8979-2b1c9235ae06,
+        id:749d42bc-dc20-4943-bc2d-a8ad499882f4,
+        id:77c105ba-0dd0-4045-adfd-110c340dbb4f,
+        id:7b77c9a6-1ef3-4ce4-821f-e8bfc2d51014,
+        id:8414ceaa-f407-48dc-b665-ef610974e906,
+        id:88517f63-6726-4a5d-b242-f37652525ffd,
+        id:911b48ce-d20c-46c3-a2e5-272384aece5b,
+        id:92c20b56-3405-4259-8699-5b662fcfad4a,
+        id:9a7eb1d9-d122-405d-bcc0-33681cecfa4f,
+        id:a9a9cb57-c7e9-4ca6-925f-a6d8ecacb7f9,
+        id:b6d58bde-4aec-4c69-b07a-a6baf9ba0755,
+        id:bae691ed-b11c-4192-a119-3cf11e4e2972,
+        id:e0365b42-231a-4fda-9228-80496149cbbc,
+        id:e9d300e5-9fca-4528-89c0-c9c859ca0355,
+        id:f3c7904e-4b39-407f-8723-6db119affddf,
+        id:f40e864c-015a-4271-a112-abc4ad95bc96,
+        id:f638d670-64e8-4f46-8fd6-a165b2f284b4,
+        id:f7f0b6d9-5e70-47e0-ad49-3d453a4d7028 ;
+    prov:hadMember id:092b9284-bfe0-4bab-ba61-c9b4662f550e,
+        id:2771e538-f0cc-492b-ab9d-a63289f7cd07,
+        id:28a8ea16-ec34-4557-a007-c8d8490b9cd5,
+        id:3112c628-da00-4a1b-a022-671170b158d9,
+        id:318dd100-398f-4cf3-abfc-afacfc26a5da,
+        id:3ec54df9-3bc8-414e-a1da-3708892584b4,
+        id:4069ff18-dd03-45f0-8c41-95fb60f925b2,
+        id:4a209ff3-b480-4a0f-a8cc-aa4d6a4ad168,
+        id:5c82a42c-4158-4e0b-ac77-a251c171da69,
+        id:61c17789-a1c6-462c-aab3-c5f1bc9b615a,
+        id:641bce77-a889-42b3-9209-53b7c086efe7,
+        id:6541c157-da07-4f68-b03b-550b5ecc0d2d,
+        id:69238d24-224d-4e31-ad02-6af5156522c4,
+        id:6b9bad2a-e93a-4ee5-9af7-2d89d3d4fca5,
+        id:759d8291-8fb1-4e91-a9cc-3903e24d52db,
+        id:7c9caf3c-ebac-4b24-b504-ec5cf8262e4b,
+        id:9f2c3205-a47c-4d57-a728-9ffc93be3405,
+        id:b7f84b3e-5139-48f6-80d7-2cb864be2f02,
+        id:b956c281-4d6d-4e8f-9154-4aa59dfda922,
+        id:c1b2942c-8e35-4d3f-9270-0ae6696ab75a,
+        id:cfc8ca02-85ab-46fa-82d0-6de157a9be30,
+        id:e82f63d5-65c3-4d3f-b436-50c0315fa9e8 ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:b6816357-85a5-4739-bf4b-e52611638691 ;
+            prov:atTime "2024-07-23T10:50:34.655768"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/simulation/output> ] ;
+    cwlprov:basename "6dhwc1wu"^^xsd:string .
+
+id:ab37b448-30e2-44f7-9893-4e6e4d064959 a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-23T10:50:37.737865"^^xsd:dateTime ;
+            prov:hadActivity id:c5ba612b-3201-4b19-9925-5efededfd632 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-23T10:29:49.359517"^^xsd:dateTime ;
+            prov:hadActivity id:c5ba612b-3201-4b19-9925-5efededfd632 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:29:49.643597"^^xsd:dateTime ;
+            prov:entity id:c1040a1d-99a3-491a-bb38-8e706a144618 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/metadata> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:29:49.644454"^^xsd:dateTime ;
+            prov:entity data:60029e84564b4f687c58171715e57fd514a3144b ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/soil_id> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:29:49.644138"^^xsd:dateTime ;
+            prov:entity id:85b20c00-3f36-4ab4-957e-07fdf3b8d2dd ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/soil_file> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-23T10:29:49.643146"^^xsd:dateTime ;
+            prov:entity id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 ;
+            prov:hadRole <arcp://uuid,ab37b448-30e2-44f7-9893-4e6e4d064959/workflow/packed.cwl#main/data_dir> ] ;
+    prov:startedAtTime "2024-07-23T10:29:49.359457"^^xsd:dateTime ;
+    prov:wasAssociatedWith id:c5ba612b-3201-4b19-9925-5efededfd632 .
+
+id:2bce17d1-cb7f-44f0-9589-5b1428b4b222 a ro:Folder,
+        wfprov:Artifact,
+        ore:Aggregation,
+        prov:Collection,
+        prov:Dictionary,
+        prov:Entity ;
+    ore:aggregates id:008de61f-9040-438f-8e22-59b610310042,
+        id:062bee39-41d9-4509-af8c-b9951b19cd4f,
+        id:06f72df5-04f6-4c1c-95ee-6d70a120bbb5,
+        id:0a1bfd04-317b-43c1-ad7c-76bf1addb5ea,
+        id:0f0a6912-d02c-4ddd-991c-6f80b8d10cd6,
+        id:185142bf-2cf6-4359-9630-2438644ff959,
+        id:1ad6fa4e-c19b-46a1-b250-6393ae1b6a21,
+        id:1e66cd34-f74c-433c-b612-99085e44144c,
+        id:222a9885-782e-4de1-8b74-43b58ab4f49a,
+        id:28cec09f-606a-439b-b573-d1b1aaf2c0cd,
+        id:2db69a0c-07fc-45c9-82a6-ea122625011a,
+        id:3d31514a-742e-4937-bfdd-01077abb0c64,
+        id:3da20a83-9511-4086-916e-29201ca3a995,
+        id:49bb57bd-978a-4f8c-aa6d-a2d206050872,
+        id:5f2f3b46-c946-4f7b-ad6a-f75ab2ae720d,
+        id:6be2be44-0167-45f1-8eb4-8d90ec2d6561,
+        id:7b00736b-290c-4355-8f78-8aeb92d98b38,
+        id:7c207a6a-1ec9-4c97-ad5a-15e398cc3110,
+        id:83f45a6d-3394-45b3-9b77-7027ca3b90d0,
+        id:8e6a2677-f699-4ffd-b852-ff2ff5bcb0fc,
+        id:912ef9b1-147d-41c6-adc7-963c10059cc8,
+        id:99813818-9859-4696-8e88-359243713ef7,
+        id:9d44c395-05f1-4930-9800-05b477f2d1b7,
+        id:a9161c0c-8be4-4570-bbab-5740be0039e6,
+        id:aa27f41e-7da8-486d-a7bf-622317262d5d,
+        id:b280b4ed-edef-47ab-8cdc-fcedcc5693d8,
+        id:c3a39ec3-52c8-4a75-9d6f-d671d0236273,
+        id:d20df701-2bdb-4c34-bdbb-2b95ec5a7ae8,
+        id:dee16662-8eb4-439f-be41-952466bf62b5,
+        id:e18279be-61b7-4833-ae64-6a17a906f088,
+        id:e1ee9e2b-d436-458c-9524-a9f9792da266,
+        id:e52afeb5-6591-40bb-9ba0-5413bceef601,
+        id:f481cdb7-164a-45d5-a711-038688f4c58a ;
+    ore:isDescribedBy metadata:directory-2bce17d1-cb7f-44f0-9589-5b1428b4b222.ttl ;
+    prov:hadDictionaryMember id:008de61f-9040-438f-8e22-59b610310042,
+        id:062bee39-41d9-4509-af8c-b9951b19cd4f,
+        id:06f72df5-04f6-4c1c-95ee-6d70a120bbb5,
+        id:0a1bfd04-317b-43c1-ad7c-76bf1addb5ea,
+        id:0f0a6912-d02c-4ddd-991c-6f80b8d10cd6,
+        id:185142bf-2cf6-4359-9630-2438644ff959,
+        id:1ad6fa4e-c19b-46a1-b250-6393ae1b6a21,
+        id:1e66cd34-f74c-433c-b612-99085e44144c,
+        id:222a9885-782e-4de1-8b74-43b58ab4f49a,
+        id:28cec09f-606a-439b-b573-d1b1aaf2c0cd,
+        id:2db69a0c-07fc-45c9-82a6-ea122625011a,
+        id:3d31514a-742e-4937-bfdd-01077abb0c64,
+        id:3da20a83-9511-4086-916e-29201ca3a995,
+        id:49bb57bd-978a-4f8c-aa6d-a2d206050872,
+        id:5f2f3b46-c946-4f7b-ad6a-f75ab2ae720d,
+        id:6be2be44-0167-45f1-8eb4-8d90ec2d6561,
+        id:7b00736b-290c-4355-8f78-8aeb92d98b38,
+        id:7c207a6a-1ec9-4c97-ad5a-15e398cc3110,
+        id:83f45a6d-3394-45b3-9b77-7027ca3b90d0,
+        id:8e6a2677-f699-4ffd-b852-ff2ff5bcb0fc,
+        id:912ef9b1-147d-41c6-adc7-963c10059cc8,
+        id:99813818-9859-4696-8e88-359243713ef7,
+        id:9d44c395-05f1-4930-9800-05b477f2d1b7,
+        id:a9161c0c-8be4-4570-bbab-5740be0039e6,
+        id:aa27f41e-7da8-486d-a7bf-622317262d5d,
+        id:b280b4ed-edef-47ab-8cdc-fcedcc5693d8,
+        id:c3a39ec3-52c8-4a75-9d6f-d671d0236273,
+        id:d20df701-2bdb-4c34-bdbb-2b95ec5a7ae8,
+        id:dee16662-8eb4-439f-be41-952466bf62b5,
+        id:e18279be-61b7-4833-ae64-6a17a906f088,
+        id:e1ee9e2b-d436-458c-9524-a9f9792da266,
+        id:e52afeb5-6591-40bb-9ba0-5413bceef601,
+        id:f481cdb7-164a-45d5-a711-038688f4c58a ;
+    prov:hadMember id:051cac06-2f63-4b54-be62-e05a4a101b1d,
+        id:059570f6-d371-43c6-b785-789c238933c9,
+        id:09ba1e3f-16b4-45fb-a8d0-76e45a7d8861,
+        id:1860bf76-385f-4695-9af8-96afccc31046,
+        id:3e6c94c2-0224-4817-bb81-508cacbfea8b,
+        id:42e880c5-b5eb-45f2-a1b7-f82ff6ad0abe,
+        id:4c2bab59-c782-478f-b103-e2382acbd652,
+        id:4f567827-d4fc-471f-a1af-961cbc1d5715,
+        id:56478d95-a23a-4ceb-afc1-53e980307bc3,
+        id:5ba15a2d-e8e7-4df2-9c06-a822d60deac8,
+        id:5c070426-5bca-45ca-8fcb-42f9e40fcecc,
+        id:671ce7ba-ca83-4a63-9244-f5cb4638e6d1,
+        id:697d327a-d3c2-42f8-a065-14dce1ee337e,
+        id:782f6c5d-025d-4d78-b7e2-33b001ed4c95,
+        id:87c8a40d-a2cc-42b3-aa11-6d59f634dbd4,
+        id:8ec1f337-5433-433d-847f-340af5502207,
+        id:8ec2f2c5-496b-4a82-9968-df8c53233deb,
+        id:931152a2-88e6-4e27-a1f7-85f5636d573f,
+        id:9a333066-d535-4d79-883e-0a63f8bae51b,
+        id:9ba9d2b5-7fd3-48f2-abe8-7d91c3a59f22,
+        id:a2b30b70-3ff7-431d-98eb-d88b556bbdfc,
+        id:a76a1719-2b26-4635-994b-33b43c1a0fb5,
+        id:bb706485-6a68-40d3-8293-1a7d3cf4bf7d,
+        id:d883355d-5b80-4f69-aa68-c6248962f685,
+        id:de441d92-a5e9-4801-a7ac-66a0c7e7c017,
+        id:df400cef-5bdf-49f1-8b1e-11d82d8cccd2,
+        id:e2e63eba-2c9e-4a1a-a9c3-118820699d3a,
+        id:e9634826-ac63-432e-8f53-621335db0b6b,
+        id:f028fa65-db6e-4675-be34-05e63ef4af89,
+        id:f3706dca-dabd-47a9-8c7c-0695664bd671,
+        id:f74f7fdb-a8ea-4d40-9ae1-0213fd2417ea,
+        id:f9d62da4-fd18-4415-af35-1177c8471c66,
+        id:fe748200-81ee-4fad-9ab3-b4a599c24361 ;
+    cwlprov:basename "0_raw"^^xsd:string .
+
+id:864f0f5a-b549-4e0c-9f39-47c2dc5d18f4 a ro:Folder,
+        wfprov:Artifact,
+        ore:Aggregation,
+        prov:Collection,
+        prov:Dictionary,
+        prov:Entity ;
+    ore:aggregates id:0197f9f3-d1d3-4f42-8074-e8e1b34787ab,
+        id:1592a4a2-f41f-4cf1-98ec-a9466cc79e28,
+        id:26f95b8f-479a-426e-9d01-caafc9168634,
+        id:304a7f9d-5839-4781-a0e8-a339cc32ccde,
+        id:37f70b29-4d01-4f1b-b744-c55b6348843d,
+        id:42f6ba7d-63e1-4b4d-8880-f58ef354ee29,
+        id:448a2111-6ab0-4dc9-a3eb-96e8f9cae008,
+        id:50486578-0fcf-4227-990c-21075f7cf1ff,
+        id:5ab03d74-2176-417f-a7d7-5c340b0e7f7b,
+        id:7c6e6073-2581-4978-86e0-270d0a678333,
+        id:80b5dfd6-25f3-43ae-aa2e-4663c2fc1e63,
+        id:840752dd-fa22-42c1-b825-76a5ad6aa37c,
+        id:8d34e125-05de-40e5-9f55-27dc66281f4d,
+        id:90d1491e-9f0c-4799-b252-1d36a27790a6,
+        id:93c524f3-22ec-4ed4-8bfe-314db3fc9f11,
+        id:9575c4da-b2e8-4db0-98a9-29ee235fdfe6,
+        id:97ddf0e1-50bd-4178-82f7-d1df75fa084a,
+        id:9b2496d2-f6ea-41e4-a3d5-b2b2e383e895,
+        id:9e929c9b-eb79-486b-8ecd-9ae5cb4cd9be,
+        id:9f3b7367-ca39-4215-b9a1-7414d0199898,
+        id:a5abea01-8fe3-4ccc-a155-f30c9dac8ed5,
+        id:adc59f40-5ec8-47f2-90a9-6a933a15159b,
+        id:baeb29ca-c3cd-482a-b953-0818a9037f87,
+        id:c2cdbc96-043d-4699-a3ac-7057e0fd1a1b,
+        id:d15c548c-9b3a-4aef-9beb-d38831c4cfbf,
+        id:e0b180c7-e9f8-4772-b22c-7756062a4ea2,
+        id:e91a083c-a11a-4a52-9adf-e2f25410b83e,
+        id:ed6cc753-a059-40e9-a5cc-511479b2e63c,
+        id:ee82ee6f-cbea-4955-9dae-eb065c2a99d8,
+        id:f137b0ee-55b7-4145-be65-01589573d5b0,
+        id:f423b4f9-e9de-4d36-8a38-05c30ac9a878,
+        id:f46fcdcc-3fca-4b95-a6a3-264e0c1afd21,
+        id:fc632ca5-ca12-4eff-8cff-5b266bdea06b ;
+    ore:isDescribedBy metadata:directory-864f0f5a-b549-4e0c-9f39-47c2dc5d18f4.ttl ;
+    prov:hadDictionaryMember id:0197f9f3-d1d3-4f42-8074-e8e1b34787ab,
+        id:1592a4a2-f41f-4cf1-98ec-a9466cc79e28,
+        id:26f95b8f-479a-426e-9d01-caafc9168634,
+        id:304a7f9d-5839-4781-a0e8-a339cc32ccde,
+        id:37f70b29-4d01-4f1b-b744-c55b6348843d,
+        id:42f6ba7d-63e1-4b4d-8880-f58ef354ee29,
+        id:448a2111-6ab0-4dc9-a3eb-96e8f9cae008,
+        id:50486578-0fcf-4227-990c-21075f7cf1ff,
+        id:5ab03d74-2176-417f-a7d7-5c340b0e7f7b,
+        id:7c6e6073-2581-4978-86e0-270d0a678333,
+        id:80b5dfd6-25f3-43ae-aa2e-4663c2fc1e63,
+        id:840752dd-fa22-42c1-b825-76a5ad6aa37c,
+        id:8d34e125-05de-40e5-9f55-27dc66281f4d,
+        id:90d1491e-9f0c-4799-b252-1d36a27790a6,
+        id:93c524f3-22ec-4ed4-8bfe-314db3fc9f11,
+        id:9575c4da-b2e8-4db0-98a9-29ee235fdfe6,
+        id:97ddf0e1-50bd-4178-82f7-d1df75fa084a,
+        id:9b2496d2-f6ea-41e4-a3d5-b2b2e383e895,
+        id:9e929c9b-eb79-486b-8ecd-9ae5cb4cd9be,
+        id:9f3b7367-ca39-4215-b9a1-7414d0199898,
+        id:a5abea01-8fe3-4ccc-a155-f30c9dac8ed5,
+        id:adc59f40-5ec8-47f2-90a9-6a933a15159b,
+        id:baeb29ca-c3cd-482a-b953-0818a9037f87,
+        id:c2cdbc96-043d-4699-a3ac-7057e0fd1a1b,
+        id:d15c548c-9b3a-4aef-9beb-d38831c4cfbf,
+        id:e0b180c7-e9f8-4772-b22c-7756062a4ea2,
+        id:e91a083c-a11a-4a52-9adf-e2f25410b83e,
+        id:ed6cc753-a059-40e9-a5cc-511479b2e63c,
+        id:ee82ee6f-cbea-4955-9dae-eb065c2a99d8,
+        id:f137b0ee-55b7-4145-be65-01589573d5b0,
+        id:f423b4f9-e9de-4d36-8a38-05c30ac9a878,
+        id:f46fcdcc-3fca-4b95-a6a3-264e0c1afd21,
+        id:fc632ca5-ca12-4eff-8cff-5b266bdea06b ;
+    prov:hadMember id:0533da98-185c-4c93-a7ef-2c29c1444bb9,
+        id:06ac8ac1-9b30-4cdb-ade4-6140c6a69401,
+        id:08f93730-d201-44cb-879b-dfaf5acb1fa7,
+        id:0d153f32-0a5b-42f2-ac7e-e00ebbf5070c,
+        id:183d13d7-ab9f-4fd1-aa32-4ec86e7fb9ec,
+        id:1a7ff9a1-28f9-4934-aa1d-838d4ea47b10,
+        id:27051655-d476-4804-ad44-b0e972a0358b,
+        id:2706c9e2-a05e-46d0-a5a4-084ee807703d,
+        id:2dac13dc-ef94-481c-b7d6-f99874bfb177,
+        id:2ed4d568-699b-46b7-9c5d-f8e849e52ff2,
+        id:4aa94da5-b9cc-4dfd-ac5b-654c7fc2130f,
+        id:55bb137b-b6c9-42c1-8a7b-4b98b52b7763,
+        id:56f3e1d8-8dda-465e-844e-dcd0421958b9,
+        id:6d751939-4de0-418e-91e0-cb527c1b6a58,
+        id:6f5d8b15-c6fa-4ee5-94a9-1f78a4544868,
+        id:83d96b85-fa17-48f4-83f3-6e8a437adb31,
+        id:9287d6f3-23ce-4448-8e4f-71b8640715db,
+        id:98c3ca4d-170c-43c5-92f8-4dfefb6a4e1a,
+        id:98c55b62-65a7-4557-9579-3a05acc06e13,
+        id:98f66891-2ed6-4efa-89fe-7146bf9526ec,
+        id:9c0596e7-b42f-4c4a-ac40-f28785da0362,
+        id:9e1ee43c-d859-409f-8c28-4f7e9eb1aff7,
+        id:aeeb4aa5-65e7-4f25-bb61-e7cae78ff9b3,
+        id:b10e996f-36f2-413c-a3fd-07fec9e5422d,
+        id:b43f900e-dc5b-40ec-98b4-a2dfe70f12f3,
+        id:ba6bb0e4-c5ba-46f3-962c-3aa1cc514cce,
+        id:bdf5cc1f-0d0c-4ca1-b169-4394894a4fbf,
+        id:c3d2cfee-d3b5-4173-a8ad-847c231f267f,
+        id:d0654e7e-9a58-4520-83df-68e20dd8f792,
+        id:dbb1efd0-e917-4eb9-b5b6-f36bda02ee2a,
+        id:e51e740a-85f6-4a6c-b102-8ce6bef924b6,
+        id:ef0c53c4-431b-4d0c-a825-830869e9bf75,
+        id:fb27cee5-b787-4437-9120-02433c6baa72 ;
+    cwlprov:basename "0_raw"^^xsd:string .
+
