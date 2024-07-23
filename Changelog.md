@@ -1,5 +1,14 @@
 # Changelog
 
+## 2024-07-23 (JK)
+* Run Workflow with provenance flag, result in `./runs/run1`
+```bash
+cwltool --provenance run1/ \
+        --enable-user-provenance --enable-host-provenance \
+        --full-name "Jens Krumsieck" --orcid https://orcid.org/0000-0001-6242-5846 \
+        ../workflows/main.cwl main_inputs.yml
+```
+
 ## 2024-07-22 (JK)
 * `main.cwl` now contains the full workflow and WORKS!!
     * Execution: `cwltool main.cwl inputs.yml`
