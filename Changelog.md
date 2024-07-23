@@ -1,7 +1,7 @@
 # Changelog
 
 ## 2024-07-23 (JK)
-* Run Workflow with provenance flag, result in `./runs/run1`
+* Run Workflow with provenance flag, result in `./runs/run1/`
 ```bash
 cwltool --provenance run1/ \
         --enable-user-provenance --enable-host-provenance \
