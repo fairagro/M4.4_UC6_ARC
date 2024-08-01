@@ -16,7 +16,15 @@ jobs:
       - name: Copy ARC
         run: docker cp ./ arc-validate:arc
       - name: Validate ARC
-        run: docker exec arc-validate arc-validate validate
+        run: docker exec arc-validate arc-validate --verbose validate -o ./
+      - name: Copy Results
+        run: docker cp arc-validate:arc/.arc-validate-results ./
+      - name: Read Results
+        uses: actions/upload-artifact@v4
+        with:
+          path: | 
+            .arc-validate-results/arc_specification@2.0.0-draft
+
       - name: Cleanup
         run: docker stop arc-validate && docker remove arc-validate
 
