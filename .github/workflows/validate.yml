@@ -1,0 +1,23 @@
+name: ARC validate
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Docker Image
+        run : docker run -dit --name arc-validate ghcr.io/nfdi4plants/arc-validate:main
+      - name: Copy ARC
+        run: docker cp ./ arc-validate:arc
+      - name: Validate ARC
+        run: docker exec arc-validate arc-validate validate
+      - name: Cleanup
+        run: docker stop arc-validate && docker remove arc-validate
+
+      
