@@ -22,9 +22,9 @@ jobs:
       - name: Read Results
         uses: actions/upload-artifact@v4
         with:
-          name: badge
+          name: results
           path: | 
-            .arc-validate-results/arc_specification@2.0.0-draft/badge.svg
+            .arc-validate-results/arc_specification@2.0.0-draft
       - name: Cleanup
         run: docker stop arc-validate && docker remove arc-validate
 
