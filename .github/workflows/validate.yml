@@ -1,10 +1,11 @@
 name: ARC validate
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Export arc.json"]
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    types:
+      - completed
 
 jobs:
   validate:
