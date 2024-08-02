@@ -9,9 +9,6 @@ pip install -r ../generator/requirements.txt
 
 for entry in `find -iname '*.R'`; do
     filename=$(basename ${entry%.*})
-    mkdir ./$filename
-    mv $entry ./$filename/$filename.R
-    
     cd $filename
     python ../../generator/workflow_tools $filename.R --docker ../Dockerfile:uc6_arc > $filename.cwl
     cd ..
