@@ -40,6 +40,12 @@ jobs:
           name: validation_results
           path: | 
             .arc-validate-results/arc_specification@2.0.0-draft
+      - name: Update badge
+        uses: exuanbo/actions-deploy-gist@v1
+        with:
+          token: ${{ secrets.GIST_TOKEN }}
+          gist_id: 4ebee77ce2479ec4c5946f469afb835a
+          file_path: '.arc-validate-results/arc_specification@2.0.0-draft/badge.svg'
       - name: evaluate results
         run: | 
           if grep -q failure .arc-validate-results/arc_specification@2.0.0-draft/validation_report.xml; then
