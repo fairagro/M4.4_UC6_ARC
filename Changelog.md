@@ -1,4 +1,7 @@
 # Changelog
+## 2024-08-01 (JK)
+* Added arc-validate CI Pipeline
+* BLs Repo now has an automated integration test running
 
 ## 2024-07-23 (JK)
 * Run Workflow with provenance flag, result in `./runs/run1/`
