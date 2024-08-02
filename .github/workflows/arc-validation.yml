@@ -21,5 +21,19 @@ jobs:
           name: arc-isa.json
           path: | 
             arc-isa.json
-
+  validate:
+    needs: export
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run arc-validate
+        run : |
+          docker pull ghcr.io/nfdi4plants/arc-validate:main  
+          docker run -v $(pwd):/arc ghcr.io/nfdi4plants/arc-validate:main  arc-validate --verbose validate -o ./
+      - name: Read Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: | 
+            .arc-validate-results/arc_specification@2.0.0-draft
       
