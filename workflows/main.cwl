@@ -35,26 +35,26 @@ steps:
   load_metadata:
     in:
       data: metadata
-    run: tools/load_metadata.cwl
+    run: load_metadata/load_metadata.cwl
     out:
     - metadata.RData
   preprocess_data:
     in:
       data: data_dir
-    run: tools/preprocess_data.cwl
+    run: preprocess_data/preprocess_data.cwl
     out:
     - preprocessed.RData
   reshape_data:
     in:
       metadata_RData: load_metadata/metadata.RData
       preprocessed_RData: preprocess_data/preprocessed.RData
-    run: tools/reshape_data.cwl
+    run: reshape_data/reshape_data.cwl
     out:
     - reshaped.RData
   transform_data:
     in:
       reshaped_RData: reshape_data/reshaped.RData
-    run: tools/transform_data.cwl
+    run: transform_data/transform_data.cwl
     out:
     - transformed.RData
   
@@ -62,21 +62,21 @@ steps:
     in: 
       transformed_RData: transform_data/transformed.RData
       reshaped_RData: reshape_data/reshaped.RData
-    run: tools/map_icasa.cwl
+    run: map_icasa/map_icasa.cwl
     out:
     - mapped_icasa.RData
 
   get_weather:
     in:    
       transformed_RData: transform_data/transformed.RData
-    run: tools/get_weather.cwl
+    run: get_weather/get_weather.cwl
     out:
     - weather_stations.RData
   map_weather:
     in: 
       weather_stations_RData: get_weather/weather_stations.RData
       mapped_icasa_RData: map_icasa/mapped_icasa.RData
-    run: tools/map_weather.cwl
+    run: map_weather/map_weather.cwl
     out:
     - mapped_weather.RData
     - weather_comments.RData
@@ -84,7 +84,7 @@ steps:
     in: 
       soil: soil_file
       soil_id: soil_id
-    run: tools/get_soil_data.cwl
+    run: get_soil_data/get_soil_data.cwl
     out:
     - soil_data.RData
 
@@ -92,21 +92,21 @@ steps:
     in: 
       soil_data_RData: get_soil_data/soil_data.RData
       mapped_weather_RData: map_weather/mapped_weather.RData
-    run: tools/map_soil_data.cwl
+    run: map_soil_data/map_soil_data.cwl
     out:
     - mapped_soil.RData
   
   estimate_phenology:
     in:
       mapped_soil_RData: map_soil_data/mapped_soil.RData
-    run: tools/estimate_phenology.cwl
+    run: estimate_phenology/estimate_phenology.cwl
     out:
     - mapped_phenology.RData
 
   icasa2dssat:
     in:
       mapped_phenology_RData: estimate_phenology/mapped_phenology.RData
-    run: tools/icasa2dssat.cwl
+    run: icasa2dssat/icasa2dssat.cwl
     out:
     - mapped_dssat.RData
   
@@ -114,7 +114,7 @@ steps:
     in:
       mapped_dssat_RData: icasa2dssat/mapped_dssat.RData
       weather_comments_RData: map_weather/weather_comments.RData
-    run: tools/format_dssat.cwl
+    run: format_dssat/format_dssat.cwl
     out:
     - format_dssat.RData
     - SEDE.SOL
@@ -124,7 +124,7 @@ steps:
       format_dssat_RData: format_dssat/format_dssat.RData
       sol: format_dssat/SEDE.SOL
       soil: soil_file
-    run: tools/simulation.cwl
+    run: simulation/simulation.cwl
     out: 
     - output
 
@@ -132,6 +132,6 @@ steps:
     in:
       format_dssat_RData: format_dssat/format_dssat.RData
       simulation_dir: simulation/output
-    run: tools/plot_results.cwl
+    run: plot_results/plot_results.cwl
     out:
       - Rplots.pdf
