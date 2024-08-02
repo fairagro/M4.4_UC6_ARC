@@ -1,4 +1,4 @@
-name: Export arc.json
+name: ARC validation pipeline
 
 on:
   push:
@@ -15,12 +15,16 @@ jobs:
         run : |
           docker pull ghcr.io/nfdi4plants/arc-export:main  
           docker run -v $(pwd):/arc ghcr.io/nfdi4plants/arc-export:main /arc-export -p arc
+          docker run -v $(pwd):/arc ghcr.io/nfdi4plants/arc-export:main /arc-export -p arc -f rocrate-metadata
+          docker run -v $(pwd):/arc ghcr.io/nfdi4plants/arc-export:main /arc-export -p arc -f summary-markdown
       - name: Read Results
         uses: actions/upload-artifact@v4
         with:
-          name: arc-isa.json
+          name: metadata
           path: | 
             arc-isa.json
+            arc-summary.md
+            arc-ro-crate-metadata.json
   validate:
     needs: export
     runs-on: ubuntu-latest
