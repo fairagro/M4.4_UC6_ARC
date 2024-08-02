@@ -12,6 +12,7 @@ for entry in `find -iname '*.R'`; do
     mkdir ./$filename
     mv $entry ./$filename/$filename.R
     
-    path=./$filename/$filename
-    python ../generator/workflow_tools $path.R --docker Dockerfile:uc6_arc > $path.cwl
+    cd $filename
+    python ../../generator/workflow_tools $filename.R --docker ../Dockerfile:uc6_arc > $filename.cwl
+    cd ..
 done

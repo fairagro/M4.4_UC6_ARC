@@ -19,8 +19,9 @@ def convert(file: str, docker: str = None) -> Tuple[str, str]:
             if not cwl.requirements:
                 cwl.requirements = []
             if "Dockerfile" in docker:  
-                id = docker.split(":")[1] if ":" in docker else None            
-                cwl.requirements.append(DockerRequirement(dockerFile={"$include": "Dockerfile"}, dockerImageId=id))
+                id = docker.split(":")[1] if ":" in docker else None   
+                path = docker.split(":")[0] 
+                cwl.requirements.append(DockerRequirement(dockerFile={"$include": path}, dockerImageId=id))
             else:
                 cwl.requirements.append(DockerRequirement(dockerPull=docker))
     
