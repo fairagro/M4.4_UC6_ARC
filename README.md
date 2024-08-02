@@ -1,4 +1,6 @@
 # ARC for UC6
+![ARC validation](https://gist.githubusercontent.com/JensKrumsieck/4ebee77ce2479ec4c5946f469afb835a/raw/badge.svg)
+
 In this repository, we will create an annotated research context [ARC](https://www.nfdi4plants.de/content/learn-more/annotated-research-context.html) with assays, studies, workflows and runs of these workflows for [Use Case 6](https://github.com/fairagro/uc6_csmTools/tree/main) of FAIRagro.
 Use Case 6 deals with ETL functions for semiautomated data integration into crop simulation modelling.
 
