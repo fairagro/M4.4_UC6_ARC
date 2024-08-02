@@ -40,13 +40,12 @@ jobs:
           name: validation_results
           path: | 
             .arc-validate-results/arc_specification@2.0.0-draft
-      - name: Validate Results
-        id: validate_results
-        uses: ActionsTools/read-json-action@main
-        with:
-          file_path: .arc-validate-results/arc_specification@2.0.0-draft/validation_summary.json
-          prop_path: "Critical.HasFailures"
-      - run: echo ${{steps.validate_results.outputs.value}}
-      
-      
+      - name: evaluate results
+        run: | 
+          if grep -q failure .arc-validate-results/arc_specification@2.0.0-draft/validation_report.xml; then
+            echo validation failed
+            exit 1
+          fi
+
+
       
