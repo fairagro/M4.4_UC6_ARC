@@ -1,4 +1,7 @@
 # Changelog
+## 2024-08-02 (JK)
+* Added the arc-export Tool to our CI Pipeline
+
 ## 2024-08-01 (JK)
 * Added arc-validate CI Pipeline
 * BLs Repo now has an automated integration test running
