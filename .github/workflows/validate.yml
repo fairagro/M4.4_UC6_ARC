@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Docker Image
+      - name: Run arc-validate
         run : |
           docker pull ghcr.io/nfdi4plants/arc-validate:main  
           docker run -v $(pwd):/arc ghcr.io/nfdi4plants/arc-validate:main  arc-validate --verbose validate -o ./
