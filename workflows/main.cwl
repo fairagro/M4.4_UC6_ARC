@@ -135,3 +135,8 @@ steps:
     run: plot_results/plot_results.cwl
     out:
       - Rplots.pdf
+  test_results:
+    in:      
+      simulation_dir: simulation/output
+    run: test_results/test_results.cwl
+    out: []
