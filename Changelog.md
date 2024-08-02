@@ -5,6 +5,7 @@
 ## 2024-08-01 (JK)
 * Added arc-validate CI Pipeline
 * BLs Repo now has an automated integration test running
+* The ARC does not pass the Validation `[07:35:44 ERR] Critical.Arc contains workflow in workflow directory failed in 00:00:00.0160000.`, see #34 for explaination
 
 ## 2024-07-23 (JK)
 * Run Workflow with provenance flag, result in `./runs/run1/`
