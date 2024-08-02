@@ -20,7 +20,7 @@ jobs:
       - name: Read Results
         uses: actions/upload-artifact@v4
         with:
-          name: metadata
+          name: arc_metadata
           path: | 
             arc-isa.json
             arc-summary.md
@@ -37,7 +37,7 @@ jobs:
       - name: Read Results
         uses: actions/upload-artifact@v4
         with:
-          name: results
+          name: validation_results
           path: | 
             .arc-validate-results/arc_specification@2.0.0-draft
       
