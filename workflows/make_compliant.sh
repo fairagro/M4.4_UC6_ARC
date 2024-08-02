@@ -1,7 +1,7 @@
 #! /bin/bash
 
 if [ ! -d "../generator/.venv/" ]; then
-python3.11 -m venv ../generator/.venv
+python3.12 -m venv ./generator/.venv
 fi
 # activate venv
 source ../generator/.venv/bin/activate
