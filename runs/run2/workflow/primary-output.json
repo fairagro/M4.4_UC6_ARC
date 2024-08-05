@@ -1,0 +1,13 @@
+{
+    "plot": {
+        "location": "../data/34/345cdfee5ceb048200cdb5a588ace6f14ed03d81",
+        "basename": "Rplots.pdf",
+        "nameroot": "Rplots",
+        "nameext": ".pdf",
+        "class": "File",
+        "checksum": "sha1$345cdfee5ceb048200cdb5a588ace6f14ed03d81",
+        "size": 12809,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:50ccbccc-99a7-44b4-8a68-e0a945c0e06e"
+    }
+}

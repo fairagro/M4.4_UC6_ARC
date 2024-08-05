@@ -141,20 +141,22 @@ steps:
     run: test_results/test_results.cwl
     out: []
 
+
+
 arc:has technology type:
 - class: arc:technology type
   arc:annotation value: Docker Container
 
 arc:performer:
 - class: arc:Person
-  arc:first name: Jane
+  arc:first name: John
   arc:last name: Doe
   arc:email: mail@institue.com
   arc:affiliation: RPTU Kaiserslautern/Landau
   arc:has role:
   - class: arc:role
-    arc:term accession: http://purl.obolibrary.org/obo/NCIT_C170397
-    arc:annotation value: Formal Search
+    arc:term accession: http://edamontology.org/operation_3214
+    arc:annotation value: Spectral analysis
 
 arc:has process sequence:
 - class: arc:process sequence
@@ -170,9 +172,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -183,9 +185,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -196,9 +198,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -209,9 +211,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -222,9 +224,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -235,9 +237,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -248,9 +250,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -261,9 +263,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -274,9 +276,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -287,9 +289,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -300,9 +302,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -313,9 +315,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/operation_3557
+      arc:term source REF: EMBRACE
+      arc:annotation value: Imputation
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -326,9 +328,9 @@ arc:has process sequence:
         arc:annotation value: Operation
     arc:value:
     - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/NCIT_C80304
-      arc:term source REF: OBO
-      arc:annotation value: Statistical Imputation
+      arc:term accession: http://edamontology.org/topic_3572
+      arc:term source REF: EMBRACE
+      arc:annotation value: Data quality management
   - class: arc:process parameter value
     arc:has parameter:
     - class: arc:protocol parameter
@@ -342,19 +344,6 @@ arc:has process sequence:
       arc:term accession: http://edamontology.org/operation_3435
       arc:term source REF: EMBRACE
       arc:annotation value: Standardisation and normalisation
-  - class: arc:process parameter value
-    arc:has parameter:
-    - class: arc:protocol parameter
-      arc:has parameter name:
-      - class: arc:parameter name
-        arc:term accession: http://edamontology.org/operation_0004
-        arc:term source REF: EMBRACE
-        arc:annotation value: Operation
-    arc:value:
-    - class: arc:ontology annotation
-      arc:term accession: http://purl.obolibrary.org/obo/UBERON_0000473
-      arc:term source REF: OBO
-      arc:annotation value: testes
 
 
 $namespaces:

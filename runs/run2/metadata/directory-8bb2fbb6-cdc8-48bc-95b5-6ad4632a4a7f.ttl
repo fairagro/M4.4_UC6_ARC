@@ -1,0 +1,274 @@
+@prefix id: <urn:uuid:> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ro: <http://purl.org/wf4ever/ro#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+id:048753b1-b9c5-40aa-849c-c60ab5eb6256 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0209_V1_0_BODENBEARBEITUNG_MASSNAHME.csv"^^xsd:string ;
+    ore:proxyFor id:e718e432-8fd9-40f7-8680-2e02f87791d4 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:0cdcf766-be0b-4196-82dc-71a02f43cace a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020099_V1_0_PFLANZENLABORWERTE.csv"^^xsd:string ;
+    ore:proxyFor id:641e5ff7-0da0-492f-9cbc-e79144895513 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:0d927603-c909-4471-b063-d863ac1725a9 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0201_V1_0_PROBENAHME_PFLANZEN.csv"^^xsd:string ;
+    ore:proxyFor id:49756811-ad46-4c5e-be39-60e8529c5261 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:0fa5b02f-0bdc-4625-866b-115ea634acb1 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0220_V1_0_FRUCHTFOLGE.csv"^^xsd:string ;
+    ore:proxyFor id:076d487d-4077-44ff-808b-3a16c7fc92a8 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:1cb96dcd-1eed-4392-aebd-acd19148a719 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0218_V1_0_TECHNIK.csv"^^xsd:string ;
+    ore:proxyFor id:36776633-bece-4779-9aab-41c1e0e364b2 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:25d7efd3-e5f3-4c91-b18e-5ea3086e3a64 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0216_V1_0_FAKTOR1_STUFE.csv"^^xsd:string ;
+    ore:proxyFor id:3947b5b9-169c-43f5-a0ae-25fcf0556c17 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:25ffdd60-20bc-4e32-bf52-00bc965ff495 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0214_V1_0_PRUEFGLIED.csv"^^xsd:string ;
+    ore:proxyFor id:66b4424b-879a-4b0b-9c34-be4704316674 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:36404804-e65f-4742-badb-64d7c664a6f1 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0217_V1_0_FAKTOR.csv"^^xsd:string ;
+    ore:proxyFor id:7b5f3259-c6f0-4875-abfc-19ef1d34fb5c ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:39b24113-3a67-4e63-b09e-085d5cdd8494 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020095_V1_0_INDIKATION.csv"^^xsd:string ;
+    ore:proxyFor id:353c4537-9856-4178-807e-ce3f2235fb09 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:3fe6096c-8428-4f8a-b434-5f73c2ec120e a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0221_V1_0_SORTE.csv"^^xsd:string ;
+    ore:proxyFor id:462cadd4-e959-481c-b4fa-f4ac2c7af9d2 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:414d082f-62f1-46c4-bb76-6a5208cfc445 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0222_V1_0_KULTUR.csv"^^xsd:string ;
+    ore:proxyFor id:d3a60619-1217-458d-bf99-b38eddfc9179 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:49333fa3-f5d1-4303-8e3b-915b7ce7f53d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen_xls_metadata.xls"^^xsd:string ;
+    ore:proxyFor id:e0bc36a9-08db-4753-906b-e2a10a7d9d53 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:61d96701-c5f4-488a-bcac-5145280b826c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0213_V1_0_PARZELLE.csv"^^xsd:string ;
+    ore:proxyFor id:c4a71fca-1c46-4c89-af99-edfb5efe0cf8 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:667559a1-3dc9-470e-aa5e-03da90b5af8c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0212_V1_0_VERSUCHSAUFBAU.csv"^^xsd:string ;
+    ore:proxyFor id:17c22bfd-24a0-4576-893c-b2bf1f0dc1f7 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:68576d61-ac95-44db-b80f-e0b6ef396745 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0211_V1_0_BEREGNUNG.csv"^^xsd:string ;
+    ore:proxyFor id:37729059-b4f0-48d8-af46-4f5d7e55eb72 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:6fbc82cc-49fd-403a-bcb4-1b8f3c53a198 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0206_V1_0_DUENGUNG.csv"^^xsd:string ;
+    ore:proxyFor id:d7e00b94-c674-4008-9888-f7b08c0f4c7a ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:784276c8-6078-44b6-886d-138940f898cd a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0204_V1_0_ERTRAG.csv"^^xsd:string ;
+    ore:proxyFor id:dc6f8cf0-d37b-4c41-816d-fbaf7fb691fe ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:78badfda-cb28-4388-bf2f-9c5979ff9d00 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020094_V1_0_PFLANZENSCHUTZ_MITTEL.csv"^^xsd:string ;
+    ore:proxyFor id:8f551a70-7ba7-4d9c-aa3d-7f4e88514cb5 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:7d08f83a-05fd-4dec-bba7-0b17b6f1c567 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0219_V1_0_SAAT_PFLANZGUT.csv"^^xsd:string ;
+    ore:proxyFor id:7a7a2ebe-b160-4311-a86e-61b3d4c51fb6 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:8dc021d1-4671-4d63-9a0a-427e8c73a317 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0210_V1_0_AUSSAAT.csv"^^xsd:string ;
+    ore:proxyFor id:b6c27c88-63f9-41fe-b458-cc1990af1104 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:9aaa8c11-9a27-4ab4-bd7b-ae3859103022 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0215_V1_0_FAKTOR2_STUFE.csv"^^xsd:string ;
+    ore:proxyFor id:8c5e174c-721e-45af-aad6-d9fac0769a89 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:afc44bbc-43af-4c14-9b64-cf0b4a2ecbc0 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0224_V1_0_BEMERKUNGEN.csv"^^xsd:string ;
+    ore:proxyFor id:8c5be7fe-cb50-4777-94cc-893ebee6b9ea ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:b4dfc047-7022-4d45-9c5e-7894ee86de19 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0202_V1_0_BODENLABORWERTE.csv"^^xsd:string ;
+    ore:proxyFor id:b131a7f5-df3f-4e9c-b0cc-a01103df2ebf ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:ba9fd8f7-a435-4704-ab5b-aeeea752b523 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020097_V1_0_STICKSTOFFBILANZ.csv"^^xsd:string ;
+    ore:proxyFor id:f0e44536-9d50-4c6a-9bcd-ca7b2a9ad603 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:c8c84ca6-89b7-454c-8ec7-875ee9adc033 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020096_V1_0_BODENBIOLOGIE.csv"^^xsd:string ;
+    ore:proxyFor id:bab43788-f423-49bf-bd95-0d1dd8e6f0dc ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:caf80aba-b05c-454a-b570-9f10c2ab3eef a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0205_V1_0_ERNTE.csv"^^xsd:string ;
+    ore:proxyFor id:33cd6a30-f27d-4692-b7f7-6d129022d192 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:d1f2f808-3570-4a8e-8932-944189decc00 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0223_V1_0_KLIMADATEN.csv"^^xsd:string ;
+    ore:proxyFor id:a3666244-5a07-40bf-a96a-a1f6497c7bc5 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:d575a4b8-7ac9-497e-8b2e-6b3c29ac6440 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0203_V1_0_PROBENAHME_BODEN.csv"^^xsd:string ;
+    ore:proxyFor id:b8ba987c-d652-4517-bc66-e6322cb2e606 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:e0097ca6-5965-4e93-a5a9-2a512a41fb83 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020092_V1_0_BONITUR.csv"^^xsd:string ;
+    ore:proxyFor id:96681230-aeb4-4456-8c4e-8be632140c74 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:e3dfb211-8679-4aea-8562-acddbcc4fdcf a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0207_V1_0_DUENGEMITTEL.csv"^^xsd:string ;
+    ore:proxyFor id:86de1f68-bc5e-4b13-bf0f-52939d18c4df ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:e6c80b6e-d18f-4390-8aa3-d82d9ad2f041 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020093_V1_0_PFLANZENSCHUTZ.csv"^^xsd:string ;
+    ore:proxyFor id:e2d93ce5-e887-4f8b-9822-2a5cb4734773 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:ed4bd818-002c-4ad5-8895-db4389147147 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L020098_V1_0_ENERGIEBILANZ.csv"^^xsd:string ;
+    ore:proxyFor id:dc7b2f2f-64dc-4100-b080-3f6fa6a354f4 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:f428c013-27b3-4fd2-8c15-8e899228811d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "lte_seehausen.ID_L0208_V1_0_BODENBEARBEITUNG.csv"^^xsd:string ;
+    ore:proxyFor id:7c1c9579-5eb7-4519-9d52-42c4f650d303 ;
+    ore:proxyIn id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f .
+
+id:8bb2fbb6-cdc8-48bc-95b5-6ad4632a4a7f a ro:Folder,
+        ore:Aggregation,
+        prov:Entity ;
+    ore:aggregates id:048753b1-b9c5-40aa-849c-c60ab5eb6256,
+        id:0cdcf766-be0b-4196-82dc-71a02f43cace,
+        id:0d927603-c909-4471-b063-d863ac1725a9,
+        id:0fa5b02f-0bdc-4625-866b-115ea634acb1,
+        id:1cb96dcd-1eed-4392-aebd-acd19148a719,
+        id:25d7efd3-e5f3-4c91-b18e-5ea3086e3a64,
+        id:25ffdd60-20bc-4e32-bf52-00bc965ff495,
+        id:36404804-e65f-4742-badb-64d7c664a6f1,
+        id:39b24113-3a67-4e63-b09e-085d5cdd8494,
+        id:3fe6096c-8428-4f8a-b434-5f73c2ec120e,
+        id:414d082f-62f1-46c4-bb76-6a5208cfc445,
+        id:49333fa3-f5d1-4303-8e3b-915b7ce7f53d,
+        id:61d96701-c5f4-488a-bcac-5145280b826c,
+        id:667559a1-3dc9-470e-aa5e-03da90b5af8c,
+        id:68576d61-ac95-44db-b80f-e0b6ef396745,
+        id:6fbc82cc-49fd-403a-bcb4-1b8f3c53a198,
+        id:784276c8-6078-44b6-886d-138940f898cd,
+        id:78badfda-cb28-4388-bf2f-9c5979ff9d00,
+        id:7d08f83a-05fd-4dec-bba7-0b17b6f1c567,
+        id:8dc021d1-4671-4d63-9a0a-427e8c73a317,
+        id:9aaa8c11-9a27-4ab4-bd7b-ae3859103022,
+        id:afc44bbc-43af-4c14-9b64-cf0b4a2ecbc0,
+        id:b4dfc047-7022-4d45-9c5e-7894ee86de19,
+        id:ba9fd8f7-a435-4704-ab5b-aeeea752b523,
+        id:c8c84ca6-89b7-454c-8ec7-875ee9adc033,
+        id:caf80aba-b05c-454a-b570-9f10c2ab3eef,
+        id:d1f2f808-3570-4a8e-8932-944189decc00,
+        id:d575a4b8-7ac9-497e-8b2e-6b3c29ac6440,
+        id:e0097ca6-5965-4e93-a5a9-2a512a41fb83,
+        id:e3dfb211-8679-4aea-8562-acddbcc4fdcf,
+        id:e6c80b6e-d18f-4390-8aa3-d82d9ad2f041,
+        id:ed4bd818-002c-4ad5-8895-db4389147147,
+        id:f428c013-27b3-4fd2-8c15-8e899228811d .
+

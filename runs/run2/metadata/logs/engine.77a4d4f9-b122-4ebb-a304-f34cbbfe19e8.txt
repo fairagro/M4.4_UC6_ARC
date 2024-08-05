@@ -1,0 +1,347 @@
+[2024-08-05T07:44:36,842.000000Z] [cwltool] /mnt/c/Users/leidel/Documents/M4_4/env/bin/cwltool --provenance run2/ --enable-user-provenance --enable-host-provenance --full-name Antonia Leidel --orcid https://orcid.org/0009-0007-1765-0527 ../workflows/main.cwl main_inputs.yml
+[2024-08-05T07:44:36,931.000000Z] Resolved '../workflows/main.cwl' to 'file:///mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/workflows/main.cwl'
+[2024-08-05T07:44:43,274.000000Z] [provenance] Adding to RO file:///mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/uc6_csmTools/inst/extdata/lte_seehausen/0_raw/lte_seehausen_xls_metadata.xls
+[2024-08-05T07:44:43,279.000000Z] [provenance] Adding to RO file:///mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/uc6_csmTools/inst/extdata/SOIL.SOL
+[2024-08-05T07:44:43,805.000000Z] [workflow ] start
+[2024-08-05T07:44:43,806.000000Z] [workflow ] starting step load_metadata
+[2024-08-05T07:44:43,806.000000Z] [step load_metadata] start
+[2024-08-05T07:44:43,976.000000Z] ['docker', 'build', '--tag=uc6_arc', '/tmp/7b70_w9d']
+[2024-08-05T07:44:44,194.000000Z] [job load_metadata] /tmp/y641k0bj$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/y641k0bj,target=/KwHvby \
+    --mount=type=bind,source=/tmp/h0p1te1w,target=/tmp \
+    --mount=type=bind,source=/mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/uc6_csmTools/inst/extdata/lte_seehausen/0_raw/lte_seehausen_xls_metadata.xls,target=/var/lib/cwl/stgd904dd4a-be8d-464e-97ed-f1a3bc5002de/lte_seehausen_xls_metadata.xls,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/y5lizv2f/20240805094444-194491.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    load_metadata.R \
+    --data \
+    /var/lib/cwl/stgd904dd4a-be8d-464e-97ed-f1a3bc5002de/lte_seehausen_xls_metadata.xls
+[2024-08-05T07:44:45,698.000000Z] [job load_metadata] Max memory used: 0MiB
+[2024-08-05T07:44:45,699.000000Z] [job load_metadata] completed success
+[2024-08-05T07:44:45,700.000000Z] [step load_metadata] completed success
+[2024-08-05T07:44:45,700.000000Z] [workflow ] starting step preprocess_data
+[2024-08-05T07:44:45,700.000000Z] [step preprocess_data] start
+[2024-08-05T07:44:45,775.000000Z] [job preprocess_data] /tmp/wn0joqqc$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/wn0joqqc,target=/KwHvby \
+    --mount=type=bind,source=/tmp/p902ja8a,target=/tmp \
+    --mount=type=bind,source=/mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/uc6_csmTools/inst/extdata/lte_seehausen/0_raw,target=/var/lib/cwl/stga0d4967f-e7bd-4057-896d-0cb6d516e348/0_raw,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/_gl_xcxy/20240805094445-774998.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    preprocess_data.R \
+    --data \
+    /var/lib/cwl/stga0d4967f-e7bd-4057-896d-0cb6d516e348/0_raw
+[2024-08-05T07:44:47,287.000000Z] [job preprocess_data] Max memory used: 0MiB
+[2024-08-05T07:44:47,289.000000Z] [job preprocess_data] completed success
+[2024-08-05T07:44:47,289.000000Z] [step preprocess_data] completed success
+[2024-08-05T07:44:47,290.000000Z] [workflow ] starting step get_soil_data
+[2024-08-05T07:44:47,290.000000Z] [step get_soil_data] start
+[2024-08-05T07:44:47,360.000000Z] [job get_soil_data] /tmp/f8umps22$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/f8umps22,target=/KwHvby \
+    --mount=type=bind,source=/tmp/bbi6hrom,target=/tmp \
+    --mount=type=bind,source=/mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/uc6_csmTools/inst/extdata/SOIL.SOL,target=/var/lib/cwl/stg3f74adca-7154-4a14-be01-393a7b1e3db9/SOIL.SOL,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/n3bvjb16/20240805094447-360449.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    get_soil_data.R \
+    --soil \
+    /var/lib/cwl/stg3f74adca-7154-4a14-be01-393a7b1e3db9/SOIL.SOL \
+    --soil_id \
+    IB00000001
+[2024-08-05T07:44:54,208.000000Z] [job get_soil_data] Max memory used: 356MiB
+[2024-08-05T07:44:54,209.000000Z] [job get_soil_data] completed success
+[2024-08-05T07:44:54,209.000000Z] [step get_soil_data] completed success
+[2024-08-05T07:44:54,210.000000Z] [workflow ] starting step reshape_data
+[2024-08-05T07:44:54,210.000000Z] [step reshape_data] start
+[2024-08-05T07:44:54,282.000000Z] [job reshape_data] /tmp/3gqx_s70$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/3gqx_s70,target=/KwHvby \
+    --mount=type=bind,source=/tmp/08oji8gs,target=/tmp \
+    --mount=type=bind,source=/tmp/wn0joqqc/preprocessed.RData,target=/KwHvby/preprocessed.RData,readonly \
+    --mount=type=bind,source=/tmp/y641k0bj/metadata.RData,target=/KwHvby/metadata.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/uzlei5pt/20240805094454-281908.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    reshape_data.R
+[2024-08-05T07:45:14,338.000000Z] [job reshape_data] Max memory used: 494MiB
+[2024-08-05T07:45:14,339.000000Z] [job reshape_data] completed success
+[2024-08-05T07:45:14,340.000000Z] [step reshape_data] completed success
+[2024-08-05T07:45:14,340.000000Z] [workflow ] starting step transform_data
+[2024-08-05T07:45:14,340.000000Z] [step transform_data] start
+[2024-08-05T07:45:14,411.000000Z] [job transform_data] /tmp/koelx0t3$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/koelx0t3,target=/KwHvby \
+    --mount=type=bind,source=/tmp/i90ylb3p,target=/tmp \
+    --mount=type=bind,source=/tmp/3gqx_s70/reshaped.RData,target=/KwHvby/reshaped.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/387623h8/20240805094514-410989.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    transform_data.R
+[2024-08-05T07:45:20,814.000000Z] [job transform_data] Max memory used: 112MiB
+[2024-08-05T07:45:20,815.000000Z] [job transform_data] completed success
+[2024-08-05T07:45:20,815.000000Z] [step transform_data] completed success
+[2024-08-05T07:45:20,815.000000Z] [workflow ] starting step get_weather
+[2024-08-05T07:45:20,816.000000Z] [step get_weather] start
+[2024-08-05T07:45:20,881.000000Z] [job get_weather] /tmp/126w9rij$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/126w9rij,target=/KwHvby \
+    --mount=type=bind,source=/tmp/b16fjk7_,target=/tmp \
+    --mount=type=bind,source=/tmp/koelx0t3/transformed.RData,target=/KwHvby/transformed.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/4_vkyovo/20240805094520-881428.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    get_weather.R
+[2024-08-05T07:54:04,81.000000Z] [job get_weather] Max memory used: 1002MiB
+[2024-08-05T07:54:04,83.000000Z] [job get_weather] completed success
+[2024-08-05T07:54:04,83.000000Z] [step get_weather] completed success
+[2024-08-05T07:54:04,84.000000Z] [workflow ] starting step map_icasa
+[2024-08-05T07:54:04,84.000000Z] [step map_icasa] start
+[2024-08-05T07:54:04,151.000000Z] [job map_icasa] /tmp/cwi30ojv$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/cwi30ojv,target=/KwHvby \
+    --mount=type=bind,source=/tmp/d4go0ah5,target=/tmp \
+    --mount=type=bind,source=/tmp/koelx0t3/transformed.RData,target=/KwHvby/transformed.RData,readonly \
+    --mount=type=bind,source=/tmp/3gqx_s70/reshaped.RData,target=/KwHvby/reshaped.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/5550k0ne/20240805095404-150997.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    map_icasa.R
+[2024-08-05T07:54:10,508.000000Z] [job map_icasa] Max memory used: 334MiB
+[2024-08-05T07:54:10,509.000000Z] [job map_icasa] completed success
+[2024-08-05T07:54:10,510.000000Z] [step map_icasa] completed success
+[2024-08-05T07:54:10,510.000000Z] [workflow ] starting step map_weather
+[2024-08-05T07:54:10,510.000000Z] [step map_weather] start
+[2024-08-05T07:54:10,582.000000Z] [job map_weather] /tmp/hbayizsu$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/hbayizsu,target=/KwHvby \
+    --mount=type=bind,source=/tmp/ig5rjpcd,target=/tmp \
+    --mount=type=bind,source=/tmp/126w9rij/weather_stations.RData,target=/KwHvby/weather_stations.RData,readonly \
+    --mount=type=bind,source=/tmp/cwi30ojv/mapped_icasa.RData,target=/KwHvby/mapped_icasa.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/b8ur1tzq/20240805095410-582452.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    map_weather.R
+[2024-08-05T07:54:16,937.000000Z] [job map_weather] Max memory used: 338MiB
+[2024-08-05T07:54:16,941.000000Z] [job map_weather] completed success
+[2024-08-05T07:54:16,941.000000Z] [step map_weather] completed success
+[2024-08-05T07:54:16,941.000000Z] [workflow ] starting step map_soil_data
+[2024-08-05T07:54:16,942.000000Z] [step map_soil_data] start
+[2024-08-05T07:54:17,8.000000Z] [job map_soil_data] /tmp/s43q_5w8$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/s43q_5w8,target=/KwHvby \
+    --mount=type=bind,source=/tmp/0z39ziz8,target=/tmp \
+    --mount=type=bind,source=/tmp/f8umps22/soil_data.RData,target=/KwHvby/soil_data.RData,readonly \
+    --mount=type=bind,source=/tmp/hbayizsu/mapped_weather.RData,target=/KwHvby/mapped_weather.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/fipbc8q0/20240805095417-008828.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    map_soil_data.R
+[2024-08-05T07:54:18,12.000000Z] [job map_soil_data] completed success
+[2024-08-05T07:54:18,12.000000Z] [step map_soil_data] completed success
+[2024-08-05T07:54:18,12.000000Z] [workflow ] starting step estimate_phenology
+[2024-08-05T07:54:18,12.000000Z] [step estimate_phenology] start
+[2024-08-05T07:54:18,76.000000Z] [job estimate_phenology] /tmp/giurq_vn$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/giurq_vn,target=/KwHvby \
+    --mount=type=bind,source=/tmp/br80z42u,target=/tmp \
+    --mount=type=bind,source=/tmp/s43q_5w8/mapped_soil.RData,target=/KwHvby/mapped_soil.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/u1au1k_4/20240805095418-076513.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    estimate_phenology.R
+[2024-08-05T07:54:34,369.000000Z] [job estimate_phenology] Max memory used: 442MiB
+[2024-08-05T07:54:34,371.000000Z] [job estimate_phenology] completed success
+[2024-08-05T07:54:34,371.000000Z] [step estimate_phenology] completed success
+[2024-08-05T07:54:34,372.000000Z] [workflow ] starting step icasa2dssat
+[2024-08-05T07:54:34,372.000000Z] [step icasa2dssat] start
+[2024-08-05T07:54:34,430.000000Z] [job icasa2dssat] /tmp/9h4ablar$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/9h4ablar,target=/KwHvby \
+    --mount=type=bind,source=/tmp/7n621orn,target=/tmp \
+    --mount=type=bind,source=/tmp/giurq_vn/mapped_phenology.RData,target=/KwHvby/mapped_phenology.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/obai3dnw/20240805095434-430894.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    icasa2dssat.R
+[2024-08-05T07:54:40,302.000000Z] [job icasa2dssat] Max memory used: 334MiB
+[2024-08-05T07:54:40,304.000000Z] [job icasa2dssat] completed success
+[2024-08-05T07:54:40,304.000000Z] [step icasa2dssat] completed success
+[2024-08-05T07:54:40,305.000000Z] [workflow ] starting step format_dssat
+[2024-08-05T07:54:40,305.000000Z] [step format_dssat] start
+[2024-08-05T07:54:40,370.000000Z] [job format_dssat] /tmp/v1hsfbjd$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/v1hsfbjd,target=/KwHvby \
+    --mount=type=bind,source=/tmp/a6kl5jg1,target=/tmp \
+    --mount=type=bind,source=/tmp/9h4ablar/mapped_dssat.RData,target=/KwHvby/mapped_dssat.RData,readonly \
+    --mount=type=bind,source=/tmp/hbayizsu/weather_comments.RData,target=/KwHvby/weather_comments.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/9ldzpxx5/20240805095440-370384.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    format_dssat.R
+[2024-08-05T07:55:06,57.000000Z] [job format_dssat] Max memory used: 435MiB
+[2024-08-05T07:55:06,61.000000Z] [job format_dssat] completed success
+[2024-08-05T07:55:06,61.000000Z] [step format_dssat] completed success
+[2024-08-05T07:55:06,62.000000Z] [workflow ] starting step simulation
+[2024-08-05T07:55:06,62.000000Z] [step simulation] start
+[2024-08-05T07:55:06,137.000000Z] [job simulation] /tmp/2y56_09s$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/2y56_09s,target=/KwHvby \
+    --mount=type=bind,source=/tmp/c0pdqygi,target=/tmp \
+    --mount=type=bind,source=/tmp/v1hsfbjd/SEDE.SOL,target=/var/lib/cwl/stg6cf941d0-281a-4a20-bd8d-6b6f3f13810b/SEDE.SOL,readonly \
+    --mount=type=bind,source=/mnt/c/Users/leidel/Documents/M4_4/git_arc/M4.4_UC6_ARC/uc6_csmTools/inst/extdata/SOIL.SOL,target=/var/lib/cwl/stgcfe3fc61-14cb-48cb-bd64-81fb1437be36/SOIL.SOL,readonly \
+    --mount=type=bind,source=/tmp/v1hsfbjd/format_dssat.RData,target=/KwHvby/format_dssat.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/9j2bja1w/20240805095506-137805.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    simulation.R \
+    --soil \
+    /var/lib/cwl/stgcfe3fc61-14cb-48cb-bd64-81fb1437be36/SOIL.SOL \
+    --sol \
+    /var/lib/cwl/stg6cf941d0-281a-4a20-bd8d-6b6f3f13810b/SEDE.SOL
+[2024-08-05T07:55:12,879.000000Z] [job simulation] Max memory used: 359MiB
+[2024-08-05T07:55:12,901.000000Z] [job simulation] completed success
+[2024-08-05T07:55:12,901.000000Z] [step simulation] completed success
+[2024-08-05T07:55:12,902.000000Z] [workflow ] starting step plot_results
+[2024-08-05T07:55:12,902.000000Z] [step plot_results] start
+[2024-08-05T07:55:12,974.000000Z] [job plot_results] /tmp/txjkjedk$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/txjkjedk,target=/KwHvby \
+    --mount=type=bind,source=/tmp/rsoxzdkw,target=/tmp \
+    --mount=type=bind,source=/tmp/2y56_09s,target=/var/lib/cwl/stg86ff0fc8-6f37-4c73-92ce-b3f314e1c52a/2y56_09s,readonly \
+    --mount=type=bind,source=/tmp/v1hsfbjd/format_dssat.RData,target=/KwHvby/format_dssat.RData,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/pa31gl54/20240805095512-974819.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    plot_results.R \
+    --simulation_dir \
+    /var/lib/cwl/stg86ff0fc8-6f37-4c73-92ce-b3f314e1c52a/2y56_09s
+[2024-08-05T07:55:15,851.000000Z] [job plot_results] Max memory used: 119MiB
+[2024-08-05T07:55:15,852.000000Z] [job plot_results] completed success
+[2024-08-05T07:55:15,852.000000Z] [step plot_results] completed success
+[2024-08-05T07:55:15,853.000000Z] [workflow ] starting step test_results
+[2024-08-05T07:55:15,853.000000Z] [step test_results] start
+[2024-08-05T07:55:15,926.000000Z] [job test_results] /tmp/ygwlic3s$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/tmp/ygwlic3s,target=/KwHvby \
+    --mount=type=bind,source=/tmp/7caug7b6,target=/tmp \
+    --mount=type=bind,source=/tmp/2y56_09s,target=/var/lib/cwl/stg2813a822-48e3-4a77-a200-e0b68b1dd72b/2y56_09s,readonly \
+    --workdir=/KwHvby \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --cidfile=/tmp/al8heh7_/20240805095515-926224.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KwHvby \
+    uc6_arc \
+    Rscript \
+    test_results.R \
+    --simulation_dir \
+    /var/lib/cwl/stg2813a822-48e3-4a77-a200-e0b68b1dd72b/2y56_09s
+[2024-08-05T07:55:22,183.000000Z] [job test_results] Max memory used: 333MiB
+[2024-08-05T07:55:22,183.000000Z] [job test_results] exited with status: 1
+[2024-08-05T07:55:22,184.000000Z] [job test_results] completed permanentFail
+[2024-08-05T07:55:22,184.000000Z] [step test_results] completed permanentFail
+[2024-08-05T07:55:22,184.000000Z] [workflow ] completed permanentFail
+[2024-08-05T07:55:22,695.000000Z] Final process status is permanentFail

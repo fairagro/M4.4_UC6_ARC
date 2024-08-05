@@ -1,0 +1,7 @@
+Bag-Software-Agent: cwltool 3.1.20240708091337
+BagIt-Profile-Identifier: https://w3id.org/ro/bagit/profile
+Bagging-Date: 2024-08-05
+External-Description: Research Object of CWL workflow run
+Contact-Name: Antonia Leidel
+External-Identifier: arcp://uuid,3a0d9647-4d5d-446f-9256-996de56560f5/
+Payload-Oxum: 4061370.69

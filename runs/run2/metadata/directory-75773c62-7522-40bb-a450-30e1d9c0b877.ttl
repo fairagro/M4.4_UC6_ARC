@@ -1,0 +1,186 @@
+@prefix id: <urn:uuid:> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ro: <http://purl.org/wf4ever/ro#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+id:01a836f1-bd97-41af-8557-b21468fe82e2 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SEDE9501.WTH"^^xsd:string ;
+    ore:proxyFor id:a063c8ba-d82b-4844-a9c1-bf7792f6a7ee ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:168404ca-3ac7-47f3-9f5f-dfd7e1d6bc64 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "RunList.OUT"^^xsd:string ;
+    ore:proxyFor id:e051a0b9-9f34-48eb-98e0-31ba70074199 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:3c08a8e5-8cb3-4fdc-a179-c27b46e1569a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "Evaluate.OUT"^^xsd:string ;
+    ore:proxyFor id:0fb5ae45-09ed-4875-b8ad-7b54cc55d7d3 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:4217a3cf-9482-4f51-bab5-b51c7b65fcf5 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SEDE.SOL"^^xsd:string ;
+    ore:proxyFor id:64934456-3aa4-4acc-9ba3-53bf74af9bb3 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:533ef998-d16f-49c3-9282-345353cce864 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SEDE9501.WHA"^^xsd:string ;
+    ore:proxyFor id:d22be300-9ad5-4507-99b5-52ed52a7e539 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:588d0edf-084b-4041-90d5-8b78753a0fee a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "INFO.OUT"^^xsd:string ;
+    ore:proxyFor id:d70b9fc2-9007-4410-8a81-0b83d32fae74 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:6836f39e-f274-4c1e-8481-8c0f757c1d47 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SoilTemp.OUT"^^xsd:string ;
+    ore:proxyFor id:10275192-bab0-41e7-a35b-4e980a0e5b47 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:83c7313c-372f-4f18-9f00-471f7b4d8646 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "DSSAT48.INP"^^xsd:string ;
+    ore:proxyFor id:b75d7cc2-f881-4542-8b84-d23981595a98 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:872f0a33-75f8-49a0-b6cb-fb7ea72de501 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SOIL.SOL"^^xsd:string ;
+    ore:proxyFor id:110e3323-72c6-43ae-b931-33921f15eb98 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:87d5f83c-0241-4f82-9d1d-a65128260fa1 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "Summary.OUT"^^xsd:string ;
+    ore:proxyFor id:c9a05ea6-43fd-445e-9340-61af9db88a0a ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:892a150f-3bf4-4c9e-9e78-cbef4b18a1ea a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "simulation.R"^^xsd:string ;
+    ore:proxyFor id:97485ad9-739d-4d69-a4c5-59570999fe63 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:8eecbe34-7571-43a5-8b27-c16476c32fb8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "DSSAT48.INH"^^xsd:string ;
+    ore:proxyFor id:a1250daa-1bc5-4595-903d-3437d3a58670 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:a3db9881-49d8-44da-ac8a-dcd41f17a8b8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "format_dssat.RData"^^xsd:string ;
+    ore:proxyFor id:17520253-18f9-4181-a52e-657af5fa2910 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:ac2669e6-ad96-4e60-b13d-7a51e8fd46b1 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SEDE9401.WTH"^^xsd:string ;
+    ore:proxyFor id:f2c0e3f7-08d3-4f9f-8e37-d2408ce07676 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:ad7af131-06a4-4386-86ee-a705e8c5d3a4 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "WARNING.OUT"^^xsd:string ;
+    ore:proxyFor id:361061f8-6a6c-47f3-8035-50f70c57c8d5 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:c096c0a6-a682-4c8a-b748-e73a4c17c08d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "Weather.OUT"^^xsd:string ;
+    ore:proxyFor id:6a8e9c56-3b04-42fb-8e08-ac9d34172484 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:c110c3eb-1576-43bd-b27a-2a3a81070dfa a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "PlantGro.OUT"^^xsd:string ;
+    ore:proxyFor id:5c0e0d8d-5e4e-4c28-9aed-7daf356d639c ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:c50c38f7-7473-4cf2-8a10-588f4cdd2735 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "OUTPUT.LST"^^xsd:string ;
+    ore:proxyFor id:a31c0a31-a175-4a4d-a33c-0a6cd4047297 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:d1281818-91e3-4c8f-8654-0bdc77235cf0 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "SEDE9501.WHX"^^xsd:string ;
+    ore:proxyFor id:39228f94-ed34-409d-8e72-bddb1f8e603e ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:da5d4a59-ad0c-46b5-b44f-4a95b0637a2e a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "DSSBatch.V48"^^xsd:string ;
+    ore:proxyFor id:bb39cb66-7334-4924-ad36-6aff7b2a1ff4 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:f3c2ccd2-ef2a-4f86-9156-20e9e85109a8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "WHAPS048.CUL"^^xsd:string ;
+    ore:proxyFor id:049cd735-aae5-48a4-a1e7-d941754e91cb ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:fca37216-e96d-46e6-b5c2-4770b40ec6dc a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "OVERVIEW.OUT"^^xsd:string ;
+    ore:proxyFor id:6d22a3ae-0a18-4aee-b568-521384ed5606 ;
+    ore:proxyIn id:75773c62-7522-40bb-a450-30e1d9c0b877 .
+
+id:75773c62-7522-40bb-a450-30e1d9c0b877 a ro:Folder,
+        ore:Aggregation,
+        prov:Entity ;
+    ore:aggregates id:01a836f1-bd97-41af-8557-b21468fe82e2,
+        id:168404ca-3ac7-47f3-9f5f-dfd7e1d6bc64,
+        id:3c08a8e5-8cb3-4fdc-a179-c27b46e1569a,
+        id:4217a3cf-9482-4f51-bab5-b51c7b65fcf5,
+        id:533ef998-d16f-49c3-9282-345353cce864,
+        id:588d0edf-084b-4041-90d5-8b78753a0fee,
+        id:6836f39e-f274-4c1e-8481-8c0f757c1d47,
+        id:83c7313c-372f-4f18-9f00-471f7b4d8646,
+        id:872f0a33-75f8-49a0-b6cb-fb7ea72de501,
+        id:87d5f83c-0241-4f82-9d1d-a65128260fa1,
+        id:892a150f-3bf4-4c9e-9e78-cbef4b18a1ea,
+        id:8eecbe34-7571-43a5-8b27-c16476c32fb8,
+        id:a3db9881-49d8-44da-ac8a-dcd41f17a8b8,
+        id:ac2669e6-ad96-4e60-b13d-7a51e8fd46b1,
+        id:ad7af131-06a4-4386-86ee-a705e8c5d3a4,
+        id:c096c0a6-a682-4c8a-b748-e73a4c17c08d,
+        id:c110c3eb-1576-43bd-b27a-2a3a81070dfa,
+        id:c50c38f7-7473-4cf2-8a10-588f4cdd2735,
+        id:d1281818-91e3-4c8f-8654-0bdc77235cf0,
+        id:da5d4a59-ad0c-46b5-b44f-4a95b0637a2e,
+        id:f3c2ccd2-ef2a-4f86-9156-20e9e85109a8,
+        id:fca37216-e96d-46e6-b5c2-4770b40ec6dc .
+
