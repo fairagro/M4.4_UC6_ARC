@@ -1,0 +1,6 @@
+requests
+pandas
+text2term
+rich
+beaupy
+click
